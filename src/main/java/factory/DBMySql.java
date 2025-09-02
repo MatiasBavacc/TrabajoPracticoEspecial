@@ -4,6 +4,10 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+import dao.derby.DERBYClienteDAO;
+import dao.interfaces.ClienteDaoInterface;
+import entities.Cliente;
+
 public class DBMySql extends BaseDeDatosFactory {
 
     private static DBMySql instance = null;
@@ -51,10 +55,10 @@ public class DBMySql extends BaseDeDatosFactory {
         }
     }
 
-    //@Override
-    //public ProductoDao getProductoDao() {
-    //return new ProductoDao(this.getConection());
-    //}
+    @Override
+    public ClienteDaoInterface<Cliente> getClienteDao() {
+        return new DERBYClienteDAO();
+    }
 
 }
 

@@ -1,8 +1,11 @@
 
-# Trabajo Práctico Especial
+# Special Practical Work
 
 ## Architecture Web
 
-### Group
+### Group N°:
+
+1 - Bava Matías  
+2 - Garay Alejandro 
 
 

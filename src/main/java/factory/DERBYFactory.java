@@ -2,6 +2,9 @@ package factory;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import dao.derby.DERBYClienteDAO;
+import dao.interfaces.ClienteDaoInterface;
+import entities.Cliente;
 
 public class DERBYFactory extends BaseDeDatosFactory {
 
@@ -36,11 +39,12 @@ public class DERBYFactory extends BaseDeDatosFactory {
         }
     }
 
-/*
+
     @Override
     public ClienteDaoInterface<Cliente> getClienteDao() {
         return new DERBYClienteDAO();
     }
+/*
     @Override
     public FacturaDaoInterface<Factura> getFacturaDao() {
         return new DERBYFacturaDAO();

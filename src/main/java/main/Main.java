@@ -1,5 +1,8 @@
 package main;
 
+import java.util.List;
+import dao.interfaces.ClienteDaoInterface;
+import entities.Cliente;
 import factory.BaseDeDatosFactory;
 import utils.ConvertCliente;
 import utils.ConvertDetalle;
@@ -14,7 +17,7 @@ public class Main {
     //private static BaseDeDatosFactory factory = BaseDeDatosFactory.getFactory(BaseDeDatosFactory.POSTGRES_JDBC);
 
     // DAO for table
-    //private static ClienteDaoInterface clienteDAO;
+    private static ClienteDaoInterface<Cliente> clienteDAO;
     //private static FacturaDaoInterface facturaDAO;
     //private static DetalleDaoInterface detalleDAO;
     //private static ProductoDaoInterface productoDAO;
@@ -64,46 +67,45 @@ public class Main {
     }
 
     public static void instanciateDAOs() throws Exception {
-        //clienteDAO = factory.getClienteDAO();
+        clienteDAO = factory.getClienteDao();
         //facturaDAO = factory.getfacturaDAO();
         //detalleDAO = factory.getdetalleDAO();
         //productoDAO = factory.getProductoDAO();
     }
 
     public static void createTables() throws Exception {
-        //clienteDAO.createTable(factory.connect());
+        clienteDAO.createTable(factory.connect());
         //facturaDAO.createTable();
         //detalleDAO.createTable();
         //productoDAO.createTable();
     }
 
     public static void fillTables() throws Exception {
-
+    	
         ConvertCliente nuevoC = new ConvertCliente();
-        System.out.println(nuevoC.convertCsv(CLIENTESCSV));
+        List<Cliente> dataC = nuevoC.convertCsv(CLIENTESCSV);
+        clienteDAO.loadCSVData(dataC , factory.connect());
+       
+        //ConvertFactura nuevaF = new ConvertFactura();
+        //System.out.println(nuevaF.convertCsv(FACTURASCSV));
 
-        ConvertFactura nuevaF = new ConvertFactura();
-        System.out.println(nuevaF.convertCsv(FACTURASCSV));
+        //ConvertDetalle nuevoD = new ConvertDetalle();
+        //System.out.println(nuevoD.convertCsv(DETALLESCSV));
 
-        ConvertDetalle nuevoD = new ConvertDetalle();
-        System.out.println(nuevoD.convertCsv(DETALLESCSV));
-
-        ConvertProducto nuevoP = new ConvertProducto();
-        System.out.println(nuevoP.convertCsv(PRODUCTOSCSV));
-
-        //clienteDAO.loadCSVData(nuevo , factory.connect());
+        //ConvertProducto nuevoP = new ConvertProducto();
+        //System.out.println(nuevoP.convertCsv(PRODUCTOSCSV));
 
     }
 
     public static void listAllTables() throws Exception {
-        //clienteDAO.listTable(factory.connect());
+        clienteDAO.listTable(factory.connect());
         //facturaDAO.listTable();
         //detalleDAO.listTable();
         //productoDAO.listTable();
     }
 
     public static void dropTables() throws Exception {
-    //    clienteDAO.dropTable();
+        // clienteDAO.dropTable(factory.connect());   <------ ya probado funciona bien
     //    facturaDAO.dropTable();
     //    detalleDAO.dropTable();
     //    productoDAO.dropTable();
