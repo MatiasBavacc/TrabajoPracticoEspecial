@@ -38,7 +38,7 @@ public class Cliente {
 
     @Override
     public String toString() {
-        return "Cliente [idCliente=" + this.idCliente + ", nombre=" + this.nombre + ", email=" + this.email + "]";
+        return "Cliente [idCliente=" + this.idCliente + ", nombre=" + this.nombre + ", email=" + this.email + "] \n";
     }
 
 }

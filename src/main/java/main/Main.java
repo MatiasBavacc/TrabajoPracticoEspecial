@@ -1,7 +1,10 @@
 package main;
 
 import factory.BaseDeDatosFactory;
-import utils.ConvertClient;
+import utils.ConvertCliente;
+import utils.ConvertDetalle;
+import utils.ConvertFactura;
+import utils.ConvertProducto;
 
 public class Main {
 
@@ -18,9 +21,9 @@ public class Main {
 
     // Archives Excel
     private static final String CLIENTESCSV = "src/main/resources/csv/clientes.csv";
-    //private static final String FACTURASCSV = "src/main/resources/csv/facturas.csv";
-    //private static final String DETALLESCSV = "src/main/resources/csv/facturas-productos.csv";
-    //private static final String PRODUCTOSCSV = "src/main/resources/csv/productos.csv";
+    private static final String FACTURASCSV = "src/main/resources/csv/facturas.csv";
+    private static final String DETALLESCSV = "src/main/resources/csv/facturas-productos.csv";
+    private static final String PRODUCTOSCSV = "src/main/resources/csv/productos.csv";
 
     public static void main(String[] args) throws Exception {
 
@@ -76,8 +79,17 @@ public class Main {
 
     public static void fillTables() throws Exception {
 
-        ConvertClient nuevo = new ConvertClient();
-        System.out.println(nuevo.convertCsv(CLIENTESCSV));
+        ConvertCliente nuevoC = new ConvertCliente();
+        System.out.println(nuevoC.convertCsv(CLIENTESCSV));
+
+        ConvertFactura nuevaF = new ConvertFactura();
+        System.out.println(nuevaF.convertCsv(FACTURASCSV));
+
+        ConvertDetalle nuevoD = new ConvertDetalle();
+        System.out.println(nuevoD.convertCsv(DETALLESCSV));
+
+        ConvertProducto nuevoP = new ConvertProducto();
+        System.out.println(nuevoP.convertCsv(PRODUCTOSCSV));
 
         //clienteDAO.loadCSVData(nuevo , factory.connect());
 

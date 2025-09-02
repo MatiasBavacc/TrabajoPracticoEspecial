@@ -38,7 +38,7 @@ public class Detalle {
 
     @Override
     public String toString() {
-        return "Detalle [idFactura=" + this.idFactura + ", idProducto=" + this.idProducto + ", cantidad=" + this.cantidad + "]";
+        return "Detalle [idFactura=" + this.idFactura + ", idProducto=" + this.idProducto + ", cantidad=" + this.cantidad + "] \n";
     }
 
 }

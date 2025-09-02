@@ -38,7 +38,7 @@ public class Producto {
 
     @Override
     public String toString() {
-        return "Producto [idProducto=" + this.idProducto + ", nombre=" + this.nombre + ", valor=" + this.valor + "]";
+        return "Producto [idProducto=" + this.idProducto + ", nombre=" + this.nombre + ", valor=" + this.valor + "] \n";
     }
 
 }

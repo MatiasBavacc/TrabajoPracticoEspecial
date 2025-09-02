@@ -28,7 +28,7 @@ public class Factura {
 
     @Override
     public String toString() {
-        return "Factura [idFactura=" + this.idFactura + ", idCliente=" + this.idCliente + "]";
+        return "Factura [idFactura=" + this.idFactura + ", idCliente=" + this.idCliente + "] \n";
     }
 
 }
