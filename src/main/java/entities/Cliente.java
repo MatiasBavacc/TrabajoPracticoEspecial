@@ -1,6 +1,7 @@
 package entities;
 
 public class Cliente {
+
     private int idCliente;
     private String nombre;
     private String email;
@@ -12,7 +13,7 @@ public class Cliente {
     }
 
     public int getIdCliente() {
-        return idCliente;
+        return this.idCliente;
     }
 
     public void setIdCliente(int idCliente) {
@@ -20,7 +21,7 @@ public class Cliente {
     }
 
     public String getNombre() {
-        return nombre;
+        return this.nombre;
     }
 
     public void setNombre(String nombre) {
@@ -28,7 +29,7 @@ public class Cliente {
     }
 
     public String getEmail() {
-        return email;
+        return this.email;
     }
 
     public void setEmail(String email) {
@@ -37,10 +38,7 @@ public class Cliente {
 
     @Override
     public String toString() {
-        return "Cliente{" +
-                "idCliente=" + idCliente +
-                ", nombre='" + nombre + '\'' +
-                ", email='" + email + '\'' +
-                "}\n";
+        return "Cliente [idCliente=" + this.idCliente + ", nombre=" + this.nombre + ", email=" + this.email + "]";
     }
+
 }

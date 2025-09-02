@@ -4,10 +4,10 @@ import entities.Producto;
 
 import java.sql.*;
 
-public class ProductoDaoInterface implements dao.interfaces.ProductoDaoInterface<Producto> {
+public class ProductoDao implements dao.interfaces.ProductoDaoInterface<Producto> {
     private Connection conn;
 
-    public ProductoDaoInterface(Connection conn){this.conn = conn;}
+    public ProductoDao(Connection conn){this.conn = conn;}
 
     @Override
     public void createDB() {}
@@ -32,9 +32,9 @@ public class ProductoDaoInterface implements dao.interfaces.ProductoDaoInterface
         String insert = "INSERT INTO producto (idProducto, nombre, valor) VALUES (?,?,?)";
         try {
             PreparedStatement prepare = conn.prepareStatement(insert);
-            prepare.setInt(1, p.getId());
+            prepare.setInt(1, p.getIdProducto());
             prepare.setString(2, p.getNombre());
-            prepare.setInt(3, p.getValor());
+            prepare.setFloat(3, p.getValor());
             prepare.executeUpdate();
             conn.commit();
         } catch (SQLException e) {

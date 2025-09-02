@@ -1,8 +1,5 @@
 package factory;
 
-import dao.mysql.ProductoDaoInterface;
-import entities.Producto;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -13,10 +10,11 @@ public class DBMySql extends BaseDeDatosFactory {
     private String uri = "jdbc:mysql://localhost:3306/myDB";
     private static Connection conn;
 
-    private DBMySql (){}
+    private DBMySql() {
+    }
 
-    public static DBMySql getInstance(){
-        if(instance == null){
+    public static DBMySql getInstance() {
+        if (instance == null) {
             //instance = new DBMySql();
             synchronized (DBMySql.class) {
                 if (instance == null) {
@@ -26,10 +24,11 @@ public class DBMySql extends BaseDeDatosFactory {
         }
         return instance;
     }
-        //Joya son unos capos!! gracias sisis de 10000!
+
+    //Joya son unos capos!! gracias sisis de 10000!
     @Override
-    public Connection getConection() {
-        if(conn == null){
+    public Connection connect() {
+        if (conn == null) {
             try {
                 conn = DriverManager.getConnection(uri, "root", "password");
                 conn.setAutoCommit(false);
@@ -42,7 +41,7 @@ public class DBMySql extends BaseDeDatosFactory {
     }
 
     @Override
-    public void closeConection() {
+    public void disconnect() {
         try {
             if (conn != null) {
                 conn.close();
@@ -52,10 +51,10 @@ public class DBMySql extends BaseDeDatosFactory {
         }
     }
 
-    @Override
-    public ProductoDaoInterface getProductoDao() {
-        return new ProductoDaoInterface(this.getConection());
-    }
-
+    //@Override
+    //public ProductoDao getProductoDao() {
+    //return new ProductoDao(this.getConection());
+    //}
 
 }
+
