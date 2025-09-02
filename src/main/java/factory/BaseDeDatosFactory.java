@@ -15,8 +15,7 @@ public abstract class BaseDeDatosFactory {
                 instance = DBMySql.getInstance();
                 break;
             case 2:
-                //instance = DBDerby.getInstance();
-                System.out.println("Selection DERBY_JDBC");
+                instance = DERBYFactory.getInstance();
                 break;
             case 3:
                 //instance = DBPostgres.getInstance();
@@ -34,11 +33,11 @@ public abstract class BaseDeDatosFactory {
 
     public abstract void disconnect() throws Exception;
 
-    //public abstract ClienteDaoInterface<Producto> getClienteDao();
+    //public abstract ClienteDaoInterface<Cliente> getClienteDao();
 
-    //public abstract FacturaDaoInterface<Producto> getFacturaDao();;
+    //public abstract FacturaDaoInterface<Factura> getFacturaDao();;
 
-    //public abstract DetalleDaoInterface<Producto> getDetalleDao();
+    //public abstract DetalleDaoInterface<Detalle> getDetalleDao();
 
     //public abstract ProductoDaoInterface<Producto> getProductoDao();
 

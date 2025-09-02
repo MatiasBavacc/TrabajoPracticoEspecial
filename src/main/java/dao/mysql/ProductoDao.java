@@ -1,19 +1,13 @@
 package dao.mysql;
 
 import entities.Producto;
-
 import java.sql.*;
+import java.util.List;
 
 public class ProductoDao implements dao.interfaces.ProductoDaoInterface<Producto> {
-    private Connection conn;
-
-    public ProductoDao(Connection conn){this.conn = conn;}
 
     @Override
-    public void createDB() {}
-
-    @Override
-    public void createTable() {
+    public void createTable(Connection conn) {
         String table = "CREATE TABLE IF NOT EXISTS producto (" +
                 "idProducto INT, " +
                 "nombre VARCHAR(250), " +
@@ -28,13 +22,13 @@ public class ProductoDao implements dao.interfaces.ProductoDaoInterface<Producto
     }
 
     @Override
-    public void setTable(Producto p) {
+    public void loadCSVData(List<Producto> data, Connection conn) {
         String insert = "INSERT INTO producto (idProducto, nombre, valor) VALUES (?,?,?)";
         try {
             PreparedStatement prepare = conn.prepareStatement(insert);
-            prepare.setInt(1, p.getIdProducto());
-            prepare.setString(2, p.getNombre());
-            prepare.setFloat(3, p.getValor());
+            //prepare.setInt(1, p.getIdProducto());
+            //prepare.setString(2, p.getNombre());
+            //prepare.setFloat(3, p.getValor());
             prepare.executeUpdate();
             conn.commit();
         } catch (SQLException e) {
@@ -43,10 +37,10 @@ public class ProductoDao implements dao.interfaces.ProductoDaoInterface<Producto
     }
 
     @Override
-    public void getTable() {
+    public void listTable(Connection conn) {
         String select = "SELECT * FROM producto";
         try  {
-            PreparedStatement prepare = this.conn.prepareStatement(select);
+            PreparedStatement prepare = conn.prepareStatement(select);
             ResultSet result = prepare.executeQuery();
             while(result.next()){
                 System.out.println(result.getInt(1) +
@@ -60,12 +54,9 @@ public class ProductoDao implements dao.interfaces.ProductoDaoInterface<Producto
     }
 
     @Override
-    public void deleteTable() {
+    public void dropTable(Connection conn) {
 
     }
 
-    public void productomas() {
-        System.out.println("el algodon es el mas vendido");
-    }
 
 }

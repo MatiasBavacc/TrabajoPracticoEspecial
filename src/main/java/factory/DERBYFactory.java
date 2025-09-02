@@ -1,0 +1,59 @@
+package factory;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class DERBYFactory extends BaseDeDatosFactory {
+
+    private static final String DRIVER = "org.apache.derby.jdbc.EmbeddedDriver";
+    private static final String URL = "jdbc:derby:MyDerbyDB;create=true;territory=en_US";
+    private static DERBYFactory instance = new DERBYFactory();
+    private static Connection connection;
+
+    private DERBYFactory() {}
+
+    public static synchronized DERBYFactory getInstance() {
+        if (instance == null) {
+            instance = new DERBYFactory();
+        }
+        return instance;
+    }
+
+    public Connection connect() throws Exception {
+        if (connection == null) {
+            Class.forName(DRIVER).getDeclaredConstructor().newInstance();
+            connection = DriverManager.getConnection(URL);
+            connection.setAutoCommit(false);
+        }
+        return connection;
+    }
+
+    public void disconnect() throws Exception {
+        if (connection != null) {
+            connection.rollback();
+            connection.close();
+            connection = null;
+        }
+    }
+
+/*
+    @Override
+    public ClienteDaoInterface<Cliente> getClienteDao() {
+        return new DERBYClienteDAO();
+    }
+    @Override
+    public FacturaDaoInterface<Factura> getFacturaDao() {
+        return new DERBYFacturaDAO();
+    }
+    /*
+    @Override
+    public DetalleDaoInterface<Detalle> getDetalleDao() {
+        return new DERBYDetalleDAO();
+    }
+    @Override
+    public ProductoDaoInterface<Producto> getProductoDao() {
+        return new DERBYProductoDAO();
+    }
+*/
+
+}
