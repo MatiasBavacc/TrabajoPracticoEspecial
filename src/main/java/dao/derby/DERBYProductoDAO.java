@@ -81,7 +81,6 @@ public class DERBYProductoDAO implements ProductoDaoInterface<Producto> {
     public void dropTable(Connection conn) throws Exception {
         System.out.println();
         System.out.println("	Borrando la tabla (Producto) ...");
-        System.out.println();
         String sql = "DROP TABLE producto";
         try (PreparedStatement ps = conn.prepareStatement(sql)) {
             ps.execute();
@@ -92,6 +91,32 @@ public class DERBYProductoDAO implements ProductoDaoInterface<Producto> {
             } else {
                 throw e;
             }
+        }
+    }
+ 
+    @Override
+    public void listarProductosMayorRecaudacion(Connection conn) throws Exception{
+        System.out.println();
+        System.out.println("	Buscando...");
+        System.out.println();
+        String sql =
+                "SELECT p.idProducto, p.nombre, " +
+                "       COALESCE(SUM(d.cantidad * p.valor), 0) AS total_recaudado " +
+                "FROM producto p " +
+                "LEFT JOIN detalle d ON p.idProducto = d.idProducto " +
+                "GROUP BY p.idProducto, p.nombre " +
+                "ORDER BY total_recaudado DESC " +
+                "FETCH FIRST 5 ROWS ONLY";   // Derby (si fuera MySQL -> LIMIT 5)
+        try (PreparedStatement ps = conn.prepareStatement(sql);
+        	ResultSet rs = ps.executeQuery()) {
+                System.out.printf("%-5s | %-30s | %-15s%n", "ID", "Producto", "Total Recaudado");
+                System.out.println("-----------------------------------------------------------");
+                while (rs.next()) {
+                    int id = rs.getInt("idProducto");
+                    String nombre = rs.getString("nombre");
+                    double total = rs.getDouble("total_recaudado");
+                    System.out.printf("%-5d | %-30s | $%.2f%n", id, nombre, total);
+                }
         }
     }
 

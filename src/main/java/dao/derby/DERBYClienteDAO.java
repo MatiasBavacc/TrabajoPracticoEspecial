@@ -80,7 +80,6 @@ public class DERBYClienteDAO implements ClienteDaoInterface<Cliente> {
     public void dropTable(Connection conn) throws Exception {
         System.out.println();
         System.out.println("	Borrando la tabla (Cliente) ...");
-        System.out.println();
         String sql = "DROP TABLE cliente";
         try (PreparedStatement ps = conn.prepareStatement(sql)) {
             ps.execute();
@@ -91,6 +90,35 @@ public class DERBYClienteDAO implements ClienteDaoInterface<Cliente> {
             } else {
                 throw e;
             }
+        }
+    }
+    
+    @Override
+    public void listarClientesMayorFacturacion(Connection conn) throws Exception {
+        System.out.println();
+        System.out.println("	Buscando...");
+        System.out.println();
+        String sql =
+            "SELECT c.idCliente, c.nombre, c.email, " +
+            "       COALESCE(SUM(d.cantidad * p.valor), 0) AS total_facturado " +
+            "FROM cliente c " +
+            "LEFT JOIN factura f ON c.idCliente = f.idCliente " +
+            "LEFT JOIN detalle d ON f.idFactura = d.idFactura " +
+            "LEFT JOIN producto p ON d.idProducto = p.idProducto " +
+            "GROUP BY c.idCliente, c.nombre, c.email " +
+            "ORDER BY total_facturado DESC " +
+            "FETCH FIRST 5 ROWS ONLY";   // en Derby funciona así (equivalente a LIMIT 5)
+        try (PreparedStatement ps = conn.prepareStatement(sql);
+             ResultSet rs = ps.executeQuery()) {
+		            System.out.printf("%-5s | %-30s | %-40s | %-12s%n","ID", "Nombre", "Email", "Total Facturado");
+		            System.out.println("----------------------------------------------------------------------------------------------------");
+		            while (rs.next()) {
+		                int id = rs.getInt("idCliente");
+		                String nombre = rs.getString("nombre");
+		                String email = rs.getString("email");
+		                double total = rs.getDouble("total_facturado");
+		                System.out.printf("%-5d | %-30s | %-40s | $%.2f%n", id, nombre, email, total);
+		            }
         }
     }
 

@@ -55,9 +55,13 @@ public class Main {
         System.out.println("- 4 - List all data in the tables...");
         listAllTables();
 
-        // 5 - listar clientes ordenados por facturacion
+        System.out.println();
+        System.out.println("- 5 - List the highest-billing clients...");
+        clienteDAO.listarClientesMayorFacturacion(factory.connect());
 
-        // 6 - listar el producto mas vendido
+        System.out.println();
+        System.out.println("- 6 - List the highest-grossing products...");
+        productoDAO.listarProductosMayorRecaudacion(factory.connect());
 
         System.out.println();
         System.out.println("- 7 - Delete tables...");
@@ -121,10 +125,10 @@ public class Main {
 
     public static void dropTables() throws Exception {
     	
-        // clienteDAO.dropTable(factory.connect());      	// <------ ya probado funciona bien
-    	// facturaDAO.dropTable(factory.connect());			// <------ ya probado funciona bien
-    	// detalleDAO.dropTable(factory.connect());			// <------ ya probado funciona bien
-    	// productoDAO.dropTable(factory.connect());		// <------ ya probado funciona bien
+        clienteDAO.dropTable(factory.connect());
+    	facturaDAO.dropTable(factory.connect());
+    	detalleDAO.dropTable(factory.connect());
+    	productoDAO.dropTable(factory.connect());
     	
     }
 

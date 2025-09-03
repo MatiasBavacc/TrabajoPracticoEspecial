@@ -58,7 +58,6 @@ public class DERBYFacturaDAO implements FacturaDaoInterface<Factura> {
     public void listTable(Connection conn) throws Exception {
         System.out.println();
         System.out.println("	Listando los datos (Factura) ...");
-        System.out.println();
         String sql = "SELECT idFactura, idCliente FROM factura";
         try (PreparedStatement ps = conn.prepareStatement(sql);
              ResultSet rs = ps.executeQuery()) {
@@ -77,7 +76,6 @@ public class DERBYFacturaDAO implements FacturaDaoInterface<Factura> {
     public void dropTable(Connection conn) throws Exception {
         System.out.println();
         System.out.println("	Borrando la tabla (Factura) ...");
-        System.out.println();
         String sql = "DROP TABLE factura";
         try (PreparedStatement ps = conn.prepareStatement(sql)) {
             ps.execute();

@@ -57,6 +57,13 @@ public class ProductoDao implements dao.interfaces.ProductoDaoInterface<Producto
     public void dropTable(Connection conn) {
 
     }
+    
+    @Override
+    public void listarProductosMayorRecaudacion(Connection conn) throws Exception{
+        System.out.println();
+        System.out.println("	Buscando...");
+        
+    }
 
 
 }

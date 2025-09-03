@@ -14,5 +14,7 @@ public interface ClienteDaoInterface<Cliente> {
     void listTable(Connection conn) throws Exception;
 
     void dropTable(Connection conn) throws Exception;
+    
+    void listarClientesMayorFacturacion(Connection conn) throws Exception;
 
 }

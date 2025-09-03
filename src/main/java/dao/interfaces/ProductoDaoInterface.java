@@ -14,5 +14,7 @@ public interface ProductoDaoInterface<Producto> {
     void listTable(Connection conn) throws Exception;
 
     void dropTable(Connection conn) throws Exception;
+    
+    void listarProductosMayorRecaudacion(Connection conn) throws Exception;
 
 }

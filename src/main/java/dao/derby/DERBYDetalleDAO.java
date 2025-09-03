@@ -61,7 +61,6 @@ public class DERBYDetalleDAO implements DetalleDaoInterface<Detalle> {
     public void listTable(Connection conn) throws Exception {
         System.out.println();
         System.out.println("	Listando los datos (Detalle) ...");
-        System.out.println();
         String sql = "SELECT idFactura, idProducto, cantidad FROM detalle";
         try (PreparedStatement ps = conn.prepareStatement(sql);
              ResultSet rs = ps.executeQuery()) {
@@ -81,7 +80,6 @@ public class DERBYDetalleDAO implements DetalleDaoInterface<Detalle> {
     public void dropTable(Connection conn) throws Exception {
         System.out.println();
         System.out.println("	Borrando la tabla (Detalle) ...");
-        System.out.println();
         String sql = "DROP TABLE detalle";
         try (PreparedStatement ps = conn.prepareStatement(sql)) {
             ps.execute();
