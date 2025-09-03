@@ -4,9 +4,11 @@ import java.util.List;
 import dao.interfaces.ClienteDaoInterface;
 import dao.interfaces.DetalleDaoInterface;
 import dao.interfaces.FacturaDaoInterface;
+import dao.interfaces.ProductoDaoInterface;
 import entities.Cliente;
 import entities.Detalle;
 import entities.Factura;
+import entities.Producto;
 import factory.BaseDeDatosFactory;
 import utils.ConvertCliente;
 import utils.ConvertDetalle;
@@ -24,7 +26,7 @@ public class Main {
     private static ClienteDaoInterface<Cliente> clienteDAO;
     private static FacturaDaoInterface<Factura> facturaDAO;
     private static DetalleDaoInterface<Detalle> detalleDAO;
-    //private static ProductoDaoInterface productoDAO;
+    private static ProductoDaoInterface<Producto> productoDAO;
 
     // Archives Excel
     private static final String CLIENTESCSV = "src/main/resources/csv/clientes.csv";
@@ -75,7 +77,7 @@ public class Main {
         clienteDAO = factory.getClienteDao();
         facturaDAO = factory.getFacturaDao();
         detalleDAO = factory.getDetalleDao();
-        //productoDAO = factory.getProductoDAO();
+        productoDAO = factory.getProductoDao();
         
     }
 
@@ -84,7 +86,7 @@ public class Main {
         clienteDAO.createTable(factory.connect());
         facturaDAO.createTable(factory.connect());
         detalleDAO.createTable(factory.connect());
-        //productoDAO.createTable();
+        productoDAO.createTable(factory.connect());
         
     }
 
@@ -102,8 +104,9 @@ public class Main {
         List<Detalle> dataD = nuevoD.convertCsv(DETALLESCSV);
         detalleDAO.loadCSVData(dataD , factory.connect());;
 
-        //ConvertProducto nuevoP = new ConvertProducto();
-        //System.out.println(nuevoP.convertCsv(PRODUCTOSCSV));
+        ConvertProducto nuevoP = new ConvertProducto();
+        List<Producto> dataP = nuevoP.convertCsv(PRODUCTOSCSV);
+        productoDAO.loadCSVData(dataP , factory.connect());
 
     }
 
@@ -112,8 +115,7 @@ public class Main {
         // clienteDAO.listTable(factory.connect());      	// <------ ya probado funciona bien
     	// facturaDAO.listTable(factory.connect());			// <------ ya probado funciona bien
     	// detalleDAO.listTable(factory.connect());			// <------ ya probado funciona bien
-
-        //productoDAO.listTable();
+    	// productoDAO.listTable(factory.connect());		// <------ ya probado funciona bien
     	
     }
 
@@ -122,8 +124,7 @@ public class Main {
         // clienteDAO.dropTable(factory.connect());      	// <------ ya probado funciona bien
     	// facturaDAO.dropTable(factory.connect());			// <------ ya probado funciona bien
     	// detalleDAO.dropTable(factory.connect());			// <------ ya probado funciona bien
-
-    //    productoDAO.dropTable();
+    	// productoDAO.dropTable(factory.connect());		// <------ ya probado funciona bien
     	
     }
 

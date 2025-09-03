@@ -6,12 +6,15 @@ import java.sql.SQLException;
 import dao.derby.DERBYClienteDAO;
 import dao.derby.DERBYDetalleDAO;
 import dao.derby.DERBYFacturaDAO;
+import dao.derby.DERBYProductoDAO;
 import dao.interfaces.ClienteDaoInterface;
 import dao.interfaces.DetalleDaoInterface;
 import dao.interfaces.FacturaDaoInterface;
+import dao.interfaces.ProductoDaoInterface;
 import entities.Cliente;
 import entities.Detalle;
 import entities.Factura;
+import entities.Producto;
 
 public class DBMySql extends BaseDeDatosFactory {
 
@@ -73,6 +76,11 @@ public class DBMySql extends BaseDeDatosFactory {
     @Override
     public DetalleDaoInterface<Detalle> getDetalleDao() {
         return new DERBYDetalleDAO();
+    }
+    
+    @Override
+    public ProductoDaoInterface<Producto> getProductoDao() {
+        return new DERBYProductoDAO();
     }
     
 }

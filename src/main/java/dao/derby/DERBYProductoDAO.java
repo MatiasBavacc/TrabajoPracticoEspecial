@@ -65,13 +65,13 @@ public class DERBYProductoDAO implements ProductoDaoInterface<Producto> {
         String sql = "SELECT idProducto, nombre, valor FROM producto";
         try (PreparedStatement ps = conn.prepareStatement(sql);
              ResultSet rs = ps.executeQuery()) {
-            System.out.println("ID \t| Nombre \t \t \t| Valor");
+            System.out.println("ID \t | Nombre \t \t \t | Valor");
             System.out.println("---------------------------------------------------------------------------------");
             while (rs.next()) {
                 int idProducto = rs.getInt("idProducto");
                 String nombre = rs.getString("nombre");
                 float valor = rs.getFloat("valor");
-                System.out.println(idProducto + " \t| " + nombre + " \t \t| " + valor);
+                System.out.println(idProducto + " \t | " + nombre + " \t \t \t | " + valor);
             }
         }
         conn.commit();
