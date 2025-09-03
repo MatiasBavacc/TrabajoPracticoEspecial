@@ -17,7 +17,7 @@ public class DERBYFacturaDAO implements FacturaDaoInterface<Factura> {
         System.out.println();
         String sql = "CREATE TABLE factura ( " +
                 "idFactura INT PRIMARY KEY, " +
-                "idCliente INT ) ";
+                "idCliente INT NOT NULL ) ";
         try {
             conn.prepareStatement(sql).execute();
             conn.commit();

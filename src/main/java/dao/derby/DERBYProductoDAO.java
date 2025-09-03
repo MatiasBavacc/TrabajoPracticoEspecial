@@ -17,8 +17,8 @@ public class DERBYProductoDAO implements ProductoDaoInterface<Producto> {
         System.out.println();
         String sql = "CREATE TABLE producto ( " +
                 "idProducto INT PRIMARY KEY, " +
-                "nombre VARCHAR(45) , " +
-                "valor FLOAT ) ";
+                "nombre VARCHAR(45) NOT NULL, " +
+                "valor FLOAT NOT NULL) ";
         try {
             conn.prepareStatement(sql).execute();
             conn.commit();

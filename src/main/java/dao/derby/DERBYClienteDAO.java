@@ -17,8 +17,8 @@ public class DERBYClienteDAO implements ClienteDaoInterface<Cliente> {
         System.out.println();
         String sql = "CREATE TABLE cliente ( " +
                 "idCliente INT PRIMARY KEY, " +
-                "nombre VARCHAR(500), " +
-                "email VARCHAR(150)) ";
+                "nombre VARCHAR(500) NOT NULL, " +
+                "email VARCHAR(150) NOT NULL) ";
         try {
             conn.prepareStatement(sql).execute();
             conn.commit();

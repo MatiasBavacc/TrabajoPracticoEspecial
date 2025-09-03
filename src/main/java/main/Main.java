@@ -71,17 +71,21 @@ public class Main {
     }
 
     public static void instanciateDAOs() throws Exception {
+    	
         clienteDAO = factory.getClienteDao();
         facturaDAO = factory.getFacturaDao();
         detalleDAO = factory.getDetalleDao();
         //productoDAO = factory.getProductoDAO();
+        
     }
 
     public static void createTables() throws Exception {
+    	
         clienteDAO.createTable(factory.connect());
         facturaDAO.createTable(factory.connect());
         detalleDAO.createTable(factory.connect());
         //productoDAO.createTable();
+        
     }
 
     public static void fillTables() throws Exception {
@@ -96,7 +100,7 @@ public class Main {
 
         ConvertDetalle nuevoD = new ConvertDetalle();
         List<Detalle> dataD = nuevoD.convertCsv(DETALLESCSV);
-        System.out.println(dataD.size());
+        detalleDAO.loadCSVData(dataD , factory.connect());;
 
         //ConvertProducto nuevoP = new ConvertProducto();
         //System.out.println(nuevoP.convertCsv(PRODUCTOSCSV));
@@ -104,17 +108,23 @@ public class Main {
     }
 
     public static void listAllTables() throws Exception {
+    	
         // clienteDAO.listTable(factory.connect());      	// <------ ya probado funciona bien
     	// facturaDAO.listTable(factory.connect());			// <------ ya probado funciona bien
-        //detalleDAO.listTable();
+    	// detalleDAO.listTable(factory.connect());			// <------ ya probado funciona bien
+
         //productoDAO.listTable();
+    	
     }
 
     public static void dropTables() throws Exception {
+    	
         // clienteDAO.dropTable(factory.connect());      	// <------ ya probado funciona bien
     	// facturaDAO.dropTable(factory.connect());			// <------ ya probado funciona bien
-    //    detalleDAO.dropTable();
+    	// detalleDAO.dropTable(factory.connect());			// <------ ya probado funciona bien
+
     //    productoDAO.dropTable();
+    	
     }
 
 }

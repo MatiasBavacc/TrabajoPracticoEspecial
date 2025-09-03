@@ -16,9 +16,10 @@ public class DERBYDetalleDAO implements DetalleDaoInterface<Detalle> {
         System.out.println("	Creando la tabla (Detalle) ...");
         System.out.println();
         String sql = "CREATE TABLE detalle ( " +
-                "idFactura INT PRIMARY KEY, " +
-                "idCliente INT , " +
-                "cantidad INT ) ";
+                "idFactura INT NOT NULL, " +
+                "idProducto INT NOT NULL, " +
+                "cantidad INT, " +
+                "PRIMARY KEY (idFactura, idProducto) )";
         try {
             conn.prepareStatement(sql).execute();
             conn.commit();
@@ -35,8 +36,7 @@ public class DERBYDetalleDAO implements DetalleDaoInterface<Detalle> {
     @Override
     public void loadCSVData(List<Detalle> data, Connection conn) throws Exception {
         System.out.println();
-        System.out.println("	Cargando los datos (Cliente) ...");
-        System.out.println();
+        System.out.println("	Cargando los datos (Detalle) ...");
         // 1) Empty the table before inserting
         String deleteSQL = "DELETE FROM detalle";
         try (PreparedStatement psDelete = conn.prepareStatement(deleteSQL)) {
@@ -60,18 +60,18 @@ public class DERBYDetalleDAO implements DetalleDaoInterface<Detalle> {
     @Override
     public void listTable(Connection conn) throws Exception {
         System.out.println();
-        System.out.println("	Listando los datos (Cliente) ...");
+        System.out.println("	Listando los datos (Detalle) ...");
         System.out.println();
-        String sql = "SELECT idCliente, nombre, email FROM detalle";
+        String sql = "SELECT idFactura, idProducto, cantidad FROM detalle";
         try (PreparedStatement ps = conn.prepareStatement(sql);
              ResultSet rs = ps.executeQuery()) {
-            System.out.println("ID \t| Nombre \t \t \t| Email");
-            System.out.println("---------------------------------------------------------------------------------");
+            System.out.println("idFactura \t | idProducto \t | cantidad");
+            System.out.println("-----------------------------------------------");
             while (rs.next()) {
-                int idCliente = rs.getInt("idCliente");
-                String nombre = rs.getString("nombre");
-                String email = rs.getString("email");
-                System.out.println(idCliente + " \t| " + nombre + " \t \t| " + email);
+                int idFactura = rs.getInt("idFactura");
+                int idProducto = rs.getInt("idProducto");
+                int cantidad = rs.getInt("cantidad");
+                System.out.println(idFactura + " \t \t | " + idProducto + " \t \t | " + cantidad);
             }
         }
         conn.commit();
