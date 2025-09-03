@@ -2,8 +2,10 @@ package main;
 
 import java.util.List;
 import dao.interfaces.ClienteDaoInterface;
+import dao.interfaces.DetalleDaoInterface;
 import dao.interfaces.FacturaDaoInterface;
 import entities.Cliente;
+import entities.Detalle;
 import entities.Factura;
 import factory.BaseDeDatosFactory;
 import utils.ConvertCliente;
@@ -21,7 +23,7 @@ public class Main {
     // DAO for table
     private static ClienteDaoInterface<Cliente> clienteDAO;
     private static FacturaDaoInterface<Factura> facturaDAO;
-    //private static DetalleDaoInterface detalleDAO;
+    private static DetalleDaoInterface<Detalle> detalleDAO;
     //private static ProductoDaoInterface productoDAO;
 
     // Archives Excel
@@ -71,14 +73,14 @@ public class Main {
     public static void instanciateDAOs() throws Exception {
         clienteDAO = factory.getClienteDao();
         facturaDAO = factory.getFacturaDao();
-        //detalleDAO = factory.getdetalleDAO();
+        detalleDAO = factory.getDetalleDao();
         //productoDAO = factory.getProductoDAO();
     }
 
     public static void createTables() throws Exception {
         clienteDAO.createTable(factory.connect());
         facturaDAO.createTable(factory.connect());
-        //detalleDAO.createTable();
+        detalleDAO.createTable(factory.connect());
         //productoDAO.createTable();
     }
 
@@ -92,8 +94,9 @@ public class Main {
         List<Factura> dataF = nuevaF.convertCsv(FACTURASCSV);
         facturaDAO.loadCSVData(dataF ,  factory.connect());
 
-        //ConvertDetalle nuevoD = new ConvertDetalle();
-        //System.out.println(nuevoD.convertCsv(DETALLESCSV));
+        ConvertDetalle nuevoD = new ConvertDetalle();
+        List<Detalle> dataD = nuevoD.convertCsv(DETALLESCSV);
+        System.out.println(dataD.size());
 
         //ConvertProducto nuevoP = new ConvertProducto();
         //System.out.println(nuevoP.convertCsv(PRODUCTOSCSV));

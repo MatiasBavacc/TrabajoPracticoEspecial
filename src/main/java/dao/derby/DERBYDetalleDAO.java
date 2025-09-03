@@ -17,7 +17,7 @@ public class DERBYDetalleDAO implements DetalleDaoInterface<Detalle> {
         System.out.println();
         String sql = "CREATE TABLE detalle ( " +
                 "idFactura INT PRIMARY KEY, " +
-                "idCliente INT PRIMARY KEY, " +
+                "idCliente INT , " +
                 "cantidad INT ) ";
         try {
             conn.prepareStatement(sql).execute();

@@ -4,10 +4,13 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import dao.derby.DERBYClienteDAO;
+import dao.derby.DERBYDetalleDAO;
 import dao.derby.DERBYFacturaDAO;
 import dao.interfaces.ClienteDaoInterface;
+import dao.interfaces.DetalleDaoInterface;
 import dao.interfaces.FacturaDaoInterface;
 import entities.Cliente;
+import entities.Detalle;
 import entities.Factura;
 
 public class DBMySql extends BaseDeDatosFactory {
@@ -65,6 +68,11 @@ public class DBMySql extends BaseDeDatosFactory {
     @Override
     public FacturaDaoInterface<Factura> getFacturaDao() {
         return new DERBYFacturaDAO();
+    }
+    
+    @Override
+    public DetalleDaoInterface<Detalle> getDetalleDao() {
+        return new DERBYDetalleDAO();
     }
     
 }

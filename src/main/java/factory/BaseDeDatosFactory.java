@@ -2,8 +2,10 @@ package factory;
 
 import java.sql.Connection;
 import dao.interfaces.ClienteDaoInterface;
+import dao.interfaces.DetalleDaoInterface;
 import dao.interfaces.FacturaDaoInterface;
 import entities.Cliente;
+import entities.Detalle;
 import entities.Factura;
 
 public abstract class BaseDeDatosFactory {
@@ -41,7 +43,7 @@ public abstract class BaseDeDatosFactory {
     
     public abstract FacturaDaoInterface<Factura> getFacturaDao();
 
-    //public abstract DetalleDaoInterface<Detalle> getDetalleDao();
+    public abstract DetalleDaoInterface<Detalle> getDetalleDao();
 
     //public abstract ProductoDaoInterface<Producto> getProductoDao();
 
