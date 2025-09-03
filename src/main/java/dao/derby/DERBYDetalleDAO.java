@@ -14,7 +14,6 @@ public class DERBYDetalleDAO implements DetalleDaoInterface<Detalle> {
     public void createTable(Connection conn) throws Exception {
         System.out.println();
         System.out.println("	Creando la tabla (Detalle) ...");
-        System.out.println();
         String sql = "CREATE TABLE detalle ( " +
                 "idFactura INT NOT NULL, " +
                 "idProducto INT NOT NULL, " +

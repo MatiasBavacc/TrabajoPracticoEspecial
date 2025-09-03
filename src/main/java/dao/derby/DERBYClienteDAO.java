@@ -14,7 +14,6 @@ public class DERBYClienteDAO implements ClienteDaoInterface<Cliente> {
     public void createTable(Connection conn) throws Exception {
         System.out.println();
         System.out.println("	Creando la tabla (Cliente) ...");
-        System.out.println();
         String sql = "CREATE TABLE cliente ( " +
                 "idCliente INT PRIMARY KEY, " +
                 "nombre VARCHAR(500) NOT NULL, " +
@@ -120,6 +119,7 @@ public class DERBYClienteDAO implements ClienteDaoInterface<Cliente> {
 		                System.out.printf("%-5d | %-30s | %-40s | $%.2f%n", id, nombre, email, total);
 		            }
         }
+        conn.commit();
     }
 
 }

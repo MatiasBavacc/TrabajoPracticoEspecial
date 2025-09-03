@@ -1,6 +1,6 @@
 ----------------------------------------------------------------
-Wed Sep 03 04:07:47 ART 2025:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.16.1.1 - (1901046): instance a816c00e-0199-0e67-2ad8-000003b79418 
+Wed Sep 03 13:19:46 ART 2025:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.16.1.1 - (1901046): instance a816c00e-0199-1060-86c1-000003b7f558 
 on database directory C:\Users\nanje\IdeaProjects\TrabajoPracticoEspecial\MyDerbyDB with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@51521cc1 
 Loaded from file:/C:/Users/nanje/.m2/repository/org/apache/derby/derby/10.16.1.1/derby-10.16.1.1.jar
 java.vendor=Eclipse Adoptium

@@ -14,7 +14,6 @@ public class DERBYProductoDAO implements ProductoDaoInterface<Producto> {
     public void createTable(Connection conn) throws Exception {
         System.out.println();
         System.out.println("	Creando la tabla (Producto) ...");
-        System.out.println();
         String sql = "CREATE TABLE producto ( " +
                 "idProducto INT PRIMARY KEY, " +
                 "nombre VARCHAR(45) NOT NULL, " +
@@ -118,6 +117,7 @@ public class DERBYProductoDAO implements ProductoDaoInterface<Producto> {
                     System.out.printf("%-5d | %-30s | $%.2f%n", id, nombre, total);
                 }
         }
+        conn.commit();
     }
 
 }
