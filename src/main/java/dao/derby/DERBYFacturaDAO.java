@@ -35,7 +35,6 @@ public class DERBYFacturaDAO implements FacturaDaoInterface<Factura> {
     public void loadCSVData(List<Factura> data, Connection conn) throws Exception {
         System.out.println();
         System.out.println("	Cargando los datos (Factura) ...");
-        System.out.println();
         // 1) Empty the table before inserting
         String deleteSQL = "DELETE FROM factura";
         try (PreparedStatement psDelete = conn.prepareStatement(deleteSQL)) {
@@ -63,12 +62,12 @@ public class DERBYFacturaDAO implements FacturaDaoInterface<Factura> {
         String sql = "SELECT idFactura, idCliente FROM factura";
         try (PreparedStatement ps = conn.prepareStatement(sql);
              ResultSet rs = ps.executeQuery()) {
-            System.out.println("ID \t| Nombre \t \t \t| Email");
-            System.out.println("---------------------------------------------------------------------------------");
+            System.out.println("idFactura \t | idCliente");
+            System.out.println("--------------------------------------");
             while (rs.next()) {
                 int idFactura = rs.getInt("idFactura");
                 int idCliente = rs.getInt("idCliente");
-                System.out.println(idFactura + " \t| " + idCliente);
+                System.out.println(idFactura + " \t \t | " + idCliente);
             }
         }
         conn.commit();

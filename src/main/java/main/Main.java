@@ -2,7 +2,9 @@ package main;
 
 import java.util.List;
 import dao.interfaces.ClienteDaoInterface;
+import dao.interfaces.FacturaDaoInterface;
 import entities.Cliente;
+import entities.Factura;
 import factory.BaseDeDatosFactory;
 import utils.ConvertCliente;
 import utils.ConvertDetalle;
@@ -18,7 +20,7 @@ public class Main {
 
     // DAO for table
     private static ClienteDaoInterface<Cliente> clienteDAO;
-    //private static FacturaDaoInterface facturaDAO;
+    private static FacturaDaoInterface<Factura> facturaDAO;
     //private static DetalleDaoInterface detalleDAO;
     //private static ProductoDaoInterface productoDAO;
 
@@ -34,11 +36,11 @@ public class Main {
         System.out.println("========================= Trabajo Práctico Integrador N°: 1 ======================");
 
         System.out.println();
-        System.out.println("- 1 - creates the database and its driver...");
+        System.out.println("- 1 - Creates the database and its driver...");
         instanciateDAOs();
 
         System.out.println();
-        System.out.println("- 2 - create the database schema...");
+        System.out.println("- 2 - Create the database schema...");
         createTables();
 
         System.out.println();
@@ -54,11 +56,11 @@ public class Main {
         // 6 - listar el producto mas vendido
 
         System.out.println();
-        System.out.println("- 7 - delete tables...");
+        System.out.println("- 7 - Delete tables...");
         dropTables();
 
         System.out.println();
-        System.out.println("- 8 - close the connection to the database...");
+        System.out.println("- 8 - Close the connection to the database...");
         factory.disconnect();
 
         System.out.println();
@@ -68,14 +70,14 @@ public class Main {
 
     public static void instanciateDAOs() throws Exception {
         clienteDAO = factory.getClienteDao();
-        //facturaDAO = factory.getfacturaDAO();
+        facturaDAO = factory.getFacturaDao();
         //detalleDAO = factory.getdetalleDAO();
         //productoDAO = factory.getProductoDAO();
     }
 
     public static void createTables() throws Exception {
         clienteDAO.createTable(factory.connect());
-        //facturaDAO.createTable();
+        facturaDAO.createTable(factory.connect());
         //detalleDAO.createTable();
         //productoDAO.createTable();
     }
@@ -86,8 +88,9 @@ public class Main {
         List<Cliente> dataC = nuevoC.convertCsv(CLIENTESCSV);
         clienteDAO.loadCSVData(dataC , factory.connect());
        
-        //ConvertFactura nuevaF = new ConvertFactura();
-        //System.out.println(nuevaF.convertCsv(FACTURASCSV));
+        ConvertFactura nuevaF = new ConvertFactura();
+        List<Factura> dataF = nuevaF.convertCsv(FACTURASCSV);
+        facturaDAO.loadCSVData(dataF ,  factory.connect());
 
         //ConvertDetalle nuevoD = new ConvertDetalle();
         //System.out.println(nuevoD.convertCsv(DETALLESCSV));
@@ -98,15 +101,15 @@ public class Main {
     }
 
     public static void listAllTables() throws Exception {
-        clienteDAO.listTable(factory.connect());
-        //facturaDAO.listTable();
+        // clienteDAO.listTable(factory.connect());      	// <------ ya probado funciona bien
+    	// facturaDAO.listTable(factory.connect());			// <------ ya probado funciona bien
         //detalleDAO.listTable();
         //productoDAO.listTable();
     }
 
     public static void dropTables() throws Exception {
-        // clienteDAO.dropTable(factory.connect());   <------ ya probado funciona bien
-    //    facturaDAO.dropTable();
+        // clienteDAO.dropTable(factory.connect());      	// <------ ya probado funciona bien
+    	// facturaDAO.dropTable(factory.connect());			// <------ ya probado funciona bien
     //    detalleDAO.dropTable();
     //    productoDAO.dropTable();
     }

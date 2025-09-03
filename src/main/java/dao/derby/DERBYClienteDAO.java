@@ -36,7 +36,6 @@ public class DERBYClienteDAO implements ClienteDaoInterface<Cliente> {
     public void loadCSVData(List<Cliente> data, Connection conn) throws Exception {
         System.out.println();
         System.out.println("	Cargando los datos (Cliente) ...");
-        System.out.println();
         // 1) Empty the table before inserting
         String deleteSQL = "DELETE FROM cliente";
         try (PreparedStatement psDelete = conn.prepareStatement(deleteSQL)) {
