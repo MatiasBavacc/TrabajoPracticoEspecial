@@ -2,11 +2,14 @@ package dao.mysql;
 
 
 import dao.interfaces.ProductoDaoInterface;
+import dto.ClienteDto;
+import dto.ProductoDto;
 import entities.Producto;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class ProductoDao implements ProductoDaoInterface<Producto> {
@@ -90,10 +93,11 @@ public class ProductoDao implements ProductoDaoInterface<Producto> {
     }
 
     @Override
-    public void listarProductosMayorRecaudacion(Connection conn) throws Exception{
+    public List<ProductoDto> listarProductosMayorRecaudacion(Connection conn) throws Exception{
         System.out.println();
         System.out.println("	Buscando...");
         System.out.println();
+        List<ProductoDto> salida = new ArrayList<>();
         String sql =
                 "SELECT p.idProducto, p.nombre, " +
                         "       COALESCE(SUM(d.cantidad * p.valor), 0) AS total_recaudado " +
@@ -101,19 +105,19 @@ public class ProductoDao implements ProductoDaoInterface<Producto> {
                         "LEFT JOIN detalle d ON p.idProducto = d.idProducto " +
                         "GROUP BY p.idProducto, p.nombre " +
                         "ORDER BY total_recaudado DESC " +
-                        "LIMIT 5";   // Derby (si fuera MySQL -> LIMIT 5)
+                        "LIMIT 1";
         try (PreparedStatement ps = conn.prepareStatement(sql);
              ResultSet rs = ps.executeQuery()) {
-            System.out.printf("%-5s | %-30s | %-15s%n", "ID", "Producto", "Total Recaudado");
-            System.out.println("-----------------------------------------------------------");
             while (rs.next()) {
                 int id = rs.getInt("idProducto");
                 String nombre = rs.getString("nombre");
-                double total = rs.getDouble("total_recaudado");
-                System.out.printf("%-5d | %-30s | $%.2f%n", id, nombre, total);
+                Float total = rs.getFloat("total_recaudado");
+                ProductoDto nuevo = new ProductoDto(id,nombre,total);
+                salida.add(nuevo);
             }
         }
         conn.commit();
+        return salida;
     }
 
 

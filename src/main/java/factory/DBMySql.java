@@ -18,12 +18,11 @@ import entities.Producto;
 
 public class DBMySql extends BaseDeDatosFactory {
 
-    private static DBMySql instance = null;
     private String uri = "jdbc:mysql://localhost:3306/Entregable1";
     private static Connection conn;
+    private static DBMySql instance = null;
 
-    private DBMySql() {
-    }
+    private DBMySql() {}
 
     public static synchronized DBMySql getInstance() {
         if (instance == null) {

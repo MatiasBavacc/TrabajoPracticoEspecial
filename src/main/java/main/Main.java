@@ -5,6 +5,8 @@ import dao.interfaces.ClienteDaoInterface;
 import dao.interfaces.DetalleDaoInterface;
 import dao.interfaces.FacturaDaoInterface;
 import dao.interfaces.ProductoDaoInterface;
+import dto.ClienteDto;
+import dto.ProductoDto;
 import entities.Cliente;
 import entities.Detalle;
 import entities.Factura;
@@ -17,7 +19,7 @@ import utils.ConvertProducto;
 
 public class Main {
 
-    // Types of databases:  MYSQL_JDBC  DERBY_JDBC  POSTGRES_JDBC
+    //Types of databases:  MYSQL_JDBC  DERBY_JDBC  POSTGRES_JDBC
     private static BaseDeDatosFactory factory = BaseDeDatosFactory.getFactory(BaseDeDatosFactory.MYSQL_JDBC);
     //private static BaseDeDatosFactory factory = BaseDeDatosFactory.getFactory(BaseDeDatosFactory.DERBY_JDBC);
 
@@ -56,11 +58,11 @@ public class Main {
 
         System.out.println();
         System.out.println("- 5 - List the highest-billing clients...");
-        clienteDAO.listarClientesMayorFacturacion(factory.connect());
+        listarRankingCliente(clienteDAO.listarClientesMayorFacturacion(factory.connect()));
 
         System.out.println();
         System.out.println("- 6 - List the highest-grossing products...");
-        productoDAO.listarProductosMayorRecaudacion(factory.connect());
+        listarRankingProducto( productoDAO.listarProductosMayorRecaudacion(factory.connect()) );
 
         System.out.println();
         System.out.println("- 7 - Delete tables...");
@@ -130,6 +132,26 @@ public class Main {
     	productoDAO.dropTable(factory.connect());
     	
     }
+
+    public static  void listarRankingCliente(List<ClienteDto> lista){
+        System.out.printf("%-5s | %-30s | %-15s%n", "ID", "Nombre", "Total Facturado");
+        System.out.println("-----------------------------------------------------------");
+        for(ClienteDto cliente : lista){
+            System.out.printf("%-5d | %-30s | $%.2f%n",
+                    cliente.getIdCliente(), cliente.getNombre(), cliente.getTotal());
+        }
+    }
+
+    public static  void listarRankingProducto(List<ProductoDto> lista){
+        System.out.printf("%-5s | %-30s | %-15s%n", "ID", "Producto", "Total Recaudado");
+        System.out.println("-----------------------------------------------------------");
+        for(ProductoDto producto : lista){
+            System.out.printf("%-5d | %-30s | $%.2f%n",
+                    producto.getIdProducto(), producto.getNombre() , producto.getTotal());
+        }
+    }
+
+
 
 }
 

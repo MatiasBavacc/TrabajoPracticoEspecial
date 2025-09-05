@@ -1,5 +1,7 @@
 package dao.interfaces;
 
+import dto.ClienteDto;
+
 import java.sql.Connection;
 import java.util.List;
 
@@ -15,6 +17,6 @@ public interface ClienteDaoInterface<Cliente> {
 
     void dropTable(Connection conn) throws Exception;
     
-    void listarClientesMayorFacturacion(Connection conn) throws Exception;
+    List<ClienteDto> listarClientesMayorFacturacion(Connection conn) throws Exception;
 
 }

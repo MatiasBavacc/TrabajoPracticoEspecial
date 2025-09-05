@@ -19,7 +19,7 @@ public class DERBYFactory extends BaseDeDatosFactory {
 
     private static final String DRIVER = "org.apache.derby.jdbc.EmbeddedDriver";
     private static final String URL = "jdbc:derby:MyDerbyDB;create=true;territory=en_US";
-    private static DERBYFactory instance = new DERBYFactory();
+    private static DERBYFactory instance = null;
     private static Connection connection;
 
     private DERBYFactory() {}
