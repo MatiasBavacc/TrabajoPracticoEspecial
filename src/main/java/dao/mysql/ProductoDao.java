@@ -1,20 +1,26 @@
 package dao.mysql;
 
+
+import dao.interfaces.ProductoDaoInterface;
 import entities.Producto;
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.List;
 
-public class ProductoDao implements dao.interfaces.ProductoDaoInterface<Producto> {
+public class ProductoDao implements ProductoDaoInterface<Producto> {
 
     @Override
-    public void createTable(Connection conn) {
-        String table = "CREATE TABLE IF NOT EXISTS producto (" +
-                "idProducto INT, " +
-                "nombre VARCHAR(250), " +
-                "valor INT," +
-                "PRIMARY KEY(idProducto)" +")";
+    public void createTable(Connection conn) throws Exception {
+        System.out.println();
+        System.out.println("	Creando la tabla (Producto) ...");
+        String sql = "CREATE TABLE IF NOT EXISTS producto ( " +
+                "idProducto INT PRIMARY KEY, " +
+                "nombre VARCHAR(45) NOT NULL, " +
+                "valor FLOAT NOT NULL) ";
         try {
-            conn.prepareStatement(table).execute();
+            conn.prepareStatement(sql).execute();
             conn.commit();
         } catch (SQLException e) {
             throw new RuntimeException("Error al intentar crear la tabla Producto" + e);
@@ -22,47 +28,92 @@ public class ProductoDao implements dao.interfaces.ProductoDaoInterface<Producto
     }
 
     @Override
-    public void loadCSVData(List<Producto> data, Connection conn) {
-        String insert = "INSERT INTO producto (idProducto, nombre, valor) VALUES (?,?,?)";
-        try {
-            PreparedStatement prepare = conn.prepareStatement(insert);
-            //prepare.setInt(1, p.getIdProducto());
-            //prepare.setString(2, p.getNombre());
-            //prepare.setFloat(3, p.getValor());
-            prepare.executeUpdate();
+    public void loadCSVData(List<Producto> data, Connection conn) throws Exception {
+        System.out.println();
+        System.out.println("	Cargando los datos (Producto) ...");
+        System.out.println();
+        // 1) Empty the table before inserting
+        String deleteSQL = "DELETE FROM producto";
+        try (PreparedStatement psDelete = conn.prepareStatement(deleteSQL)) {
+            psDelete.executeUpdate();
+            conn.commit();
+        }
+        // 2) Insert all records from the CSV
+        String insertSQL = "INSERT INTO producto (idProducto, nombre, valor) VALUES (?, ?, ?)";
+        try (PreparedStatement ps = conn.prepareStatement(insertSQL)) {
+            for (Producto producto: data) {
+                ps.setInt(1, producto.getIdProducto());
+                ps.setString(2, producto.getNombre());
+                ps.setFloat(3, producto.getValor());
+                ps.addBatch();
+            }
+            ps.executeBatch();
+            conn.commit();
+        }
+    }
+
+    @Override
+    public void listTable(Connection conn) throws Exception {
+        System.out.println();
+        System.out.println("	Listando los datos (Producto) ...");
+        System.out.println();
+        String sql = "SELECT idProducto, nombre, valor FROM producto";
+        try (PreparedStatement ps = conn.prepareStatement(sql);
+             ResultSet rs = ps.executeQuery()) {
+            System.out.println("ID \t | Nombre \t \t \t | Valor");
+            System.out.println("---------------------------------------------------------------------------------");
+            while (rs.next()) {
+                int idProducto = rs.getInt("idProducto");
+                String nombre = rs.getString("nombre");
+                float valor = rs.getFloat("valor");
+                System.out.println(idProducto + " \t | " + nombre + " \t \t \t | " + valor);
+            }
+        }
+        conn.commit();
+    }
+
+    @Override
+    public void dropTable(Connection conn) throws Exception {
+        System.out.println();
+        System.out.println("	Borrando la tabla (Producto) ...");
+        String sql = "DROP TABLE producto";
+        try (PreparedStatement ps = conn.prepareStatement(sql)) {
+            ps.execute();
             conn.commit();
         } catch (SQLException e) {
-            throw new RuntimeException("Error en la inserción de datos en la tabla Producto.", e);
-        }
-    }
-
-    @Override
-    public void listTable(Connection conn) {
-        String select = "SELECT * FROM producto";
-        try  {
-            PreparedStatement prepare = conn.prepareStatement(select);
-            ResultSet result = prepare.executeQuery();
-            while(result.next()){
-                System.out.println(result.getInt(1) +
-                        ", Nombre " + result.getString(2) +
-                        ", Valor " + result.getInt(3) +
-                        ".");
+            if ("42Y55".equals(e.getSQLState())) { // Table does not exist
+                System.out.println("La tabla Producto no existe, se omite el DROP...");
+            } else {
+                throw e;
             }
-        } catch (SQLException e) {
-            throw new RuntimeException("Error en la solicitud",e);
         }
     }
 
-    @Override
-    public void dropTable(Connection conn) {
-
-    }
-    
     @Override
     public void listarProductosMayorRecaudacion(Connection conn) throws Exception{
         System.out.println();
         System.out.println("	Buscando...");
-        
+        System.out.println();
+        String sql =
+                "SELECT p.idProducto, p.nombre, " +
+                        "       COALESCE(SUM(d.cantidad * p.valor), 0) AS total_recaudado " +
+                        "FROM producto p " +
+                        "LEFT JOIN detalle d ON p.idProducto = d.idProducto " +
+                        "GROUP BY p.idProducto, p.nombre " +
+                        "ORDER BY total_recaudado DESC " +
+                        "LIMIT 5";   // Derby (si fuera MySQL -> LIMIT 5)
+        try (PreparedStatement ps = conn.prepareStatement(sql);
+             ResultSet rs = ps.executeQuery()) {
+            System.out.printf("%-5s | %-30s | %-15s%n", "ID", "Producto", "Total Recaudado");
+            System.out.println("-----------------------------------------------------------");
+            while (rs.next()) {
+                int id = rs.getInt("idProducto");
+                String nombre = rs.getString("nombre");
+                double total = rs.getDouble("total_recaudado");
+                System.out.printf("%-5d | %-30s | $%.2f%n", id, nombre, total);
+            }
+        }
+        conn.commit();
     }
 
 

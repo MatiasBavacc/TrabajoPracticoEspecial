@@ -14,21 +14,15 @@ public class ClienteDao implements ClienteDaoInterface<Cliente> {
     public void createTable(Connection conn) throws Exception {
         System.out.println();
         System.out.println("	Creando la tabla (Cliente) ...");
-        System.out.println();
-        String sql = "CREATE TABLE cliente ( " +
+        String sql = "CREATE TABLE IF NOT EXISTS cliente ( " +
                 "idCliente INT PRIMARY KEY, " +
-                "nombre VARCHAR(500), " +
-                "email VARCHAR(150)) ";
+                "nombre VARCHAR(500) NOT NULL, " +
+                "email VARCHAR(150) NOT NULL) ";
         try {
             conn.prepareStatement(sql).execute();
             conn.commit();
         } catch (SQLException e) {
-            if (e.getSQLState().equals("X0Y32")) { // X0Y32 = "Table already exists..."
-                System.out.println("	La tabla Cliente ya existía, se continúa...");
-                conn.rollback();
-            } else {
-                throw e; // if he threw other errors
-            }
+            throw new RuntimeException("Error al intentar crear la tabla Producto" + e);
         }
     }
 
@@ -80,7 +74,6 @@ public class ClienteDao implements ClienteDaoInterface<Cliente> {
     public void dropTable(Connection conn) throws Exception {
         System.out.println();
         System.out.println("	Borrando la tabla (Cliente) ...");
-        System.out.println();
         String sql = "DROP TABLE cliente";
         try (PreparedStatement ps = conn.prepareStatement(sql)) {
             ps.execute();
@@ -93,12 +86,35 @@ public class ClienteDao implements ClienteDaoInterface<Cliente> {
             }
         }
     }
-    
+
     @Override
-    public void listarClientesMayorFacturacion(Connection conn) throws Exception{
+    public void listarClientesMayorFacturacion(Connection conn) throws Exception {
         System.out.println();
         System.out.println("	Buscando...");
-        
+        System.out.println();
+        String sql =
+                "SELECT c.idCliente, c.nombre, c.email, " +
+                        "       COALESCE(SUM(d.cantidad * p.valor), 0) AS total_facturado " +
+                        "FROM cliente c " +
+                        "LEFT JOIN factura f ON c.idCliente = f.idCliente " +
+                        "LEFT JOIN detalle d ON f.idFactura = d.idFactura " +
+                        "LEFT JOIN producto p ON d.idProducto = p.idProducto " +
+                        "GROUP BY c.idCliente, c.nombre, c.email " +
+                        "ORDER BY total_facturado DESC " +
+                        "LIMIT 5";   // en Derby funciona así (equivalente a LIMIT 5)
+        try (PreparedStatement ps = conn.prepareStatement(sql);
+             ResultSet rs = ps.executeQuery()) {
+            System.out.printf("%-5s | %-30s | %-40s | %-12s%n","ID", "Nombre", "Email", "Total Facturado");
+            System.out.println("----------------------------------------------------------------------------------------------------");
+            while (rs.next()) {
+                int id = rs.getInt("idCliente");
+                String nombre = rs.getString("nombre");
+                String email = rs.getString("email");
+                double total = rs.getDouble("total_facturado");
+                System.out.printf("%-5d | %-30s | %-40s | $%.2f%n", id, nombre, email, total);
+            }
+        }
+        conn.commit();
     }
 
 }

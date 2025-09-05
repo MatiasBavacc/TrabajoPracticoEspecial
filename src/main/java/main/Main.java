@@ -18,9 +18,8 @@ import utils.ConvertProducto;
 public class Main {
 
     // Types of databases:  MYSQL_JDBC  DERBY_JDBC  POSTGRES_JDBC
-    //private static BaseDeDatosFactory factory = BaseDeDatosFactory.getFactory(BaseDeDatosFactory.MYSQL_JDBC);
-    private static BaseDeDatosFactory factory = BaseDeDatosFactory.getFactory(BaseDeDatosFactory.DERBY_JDBC);
-    //private static BaseDeDatosFactory factory = BaseDeDatosFactory.getFactory(BaseDeDatosFactory.POSTGRES_JDBC);
+    private static BaseDeDatosFactory factory = BaseDeDatosFactory.getFactory(BaseDeDatosFactory.MYSQL_JDBC);
+    //private static BaseDeDatosFactory factory = BaseDeDatosFactory.getFactory(BaseDeDatosFactory.DERBY_JDBC);
 
     // DAO for table
     private static ClienteDaoInterface<Cliente> clienteDAO;
@@ -116,10 +115,10 @@ public class Main {
 
     public static void listAllTables() throws Exception {
     	
-        // clienteDAO.listTable(factory.connect());      	// <------ ya probado funciona bien
-    	// facturaDAO.listTable(factory.connect());			// <------ ya probado funciona bien
-    	// detalleDAO.listTable(factory.connect());			// <------ ya probado funciona bien
-    	// productoDAO.listTable(factory.connect());		// <------ ya probado funciona bien
+        //clienteDAO.listTable(factory.connect());      	// <------ ya probado funciona bien
+    	//facturaDAO.listTable(factory.connect());			// <------ ya probado funciona bien
+    	//detalleDAO.listTable(factory.connect());			// <------ ya probado funciona bien
+    	//productoDAO.listTable(factory.connect());		    // <------ ya probado funciona bien
     	
     }
 

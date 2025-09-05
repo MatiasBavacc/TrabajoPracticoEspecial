@@ -3,14 +3,14 @@ package factory;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import dao.derby.DERBYClienteDAO;
-import dao.derby.DERBYDetalleDAO;
-import dao.derby.DERBYFacturaDAO;
-import dao.derby.DERBYProductoDAO;
 import dao.interfaces.ClienteDaoInterface;
 import dao.interfaces.DetalleDaoInterface;
 import dao.interfaces.FacturaDaoInterface;
 import dao.interfaces.ProductoDaoInterface;
+import dao.mysql.ClienteDao;
+import dao.mysql.DetalleDao;
+import dao.mysql.FacturaDao;
+import dao.mysql.ProductoDao;
 import entities.Cliente;
 import entities.Detalle;
 import entities.Factura;
@@ -19,20 +19,15 @@ import entities.Producto;
 public class DBMySql extends BaseDeDatosFactory {
 
     private static DBMySql instance = null;
-    private String uri = "jdbc:mysql://localhost:3306/myDB";
+    private String uri = "jdbc:mysql://localhost:3306/Entregable1";
     private static Connection conn;
 
     private DBMySql() {
     }
 
-    public static DBMySql getInstance() {
+    public static synchronized DBMySql getInstance() {
         if (instance == null) {
-            //instance = new DBMySql();
-            synchronized (DBMySql.class) {
-                if (instance == null) {
-                    instance = new DBMySql();
-                }
-            }
+            instance = new DBMySql();
         }
         return instance;
     }
@@ -42,9 +37,8 @@ public class DBMySql extends BaseDeDatosFactory {
     public Connection connect() {
         if (conn == null) {
             try {
-                conn = DriverManager.getConnection(uri, "root", "password");
+                conn = DriverManager.getConnection(uri, "root", "");
                 conn.setAutoCommit(false);
-                //this.conn.close();
             } catch (SQLException e) {
                 throw new RuntimeException(e);
             }
@@ -56,7 +50,9 @@ public class DBMySql extends BaseDeDatosFactory {
     public void disconnect() {
         try {
             if (conn != null) {
+                conn.rollback();
                 conn.close();
+                conn = null;
             }
         } catch (SQLException e) {
             throw new RuntimeException("Error cerrando la conexión", e);
@@ -65,22 +61,20 @@ public class DBMySql extends BaseDeDatosFactory {
 
     @Override
     public ClienteDaoInterface<Cliente> getClienteDao() {
-        return new DERBYClienteDAO();
+        return new ClienteDao();
     }
 
     @Override
     public FacturaDaoInterface<Factura> getFacturaDao() {
-        return new DERBYFacturaDAO();
+        return new FacturaDao();
     }
     
     @Override
-    public DetalleDaoInterface<Detalle> getDetalleDao() {
-        return new DERBYDetalleDAO();
-    }
+    public DetalleDaoInterface<Detalle> getDetalleDao() { return new DetalleDao(); }
     
     @Override
     public ProductoDaoInterface<Producto> getProductoDao() {
-        return new DERBYProductoDAO();
+        return new ProductoDao();
     }
     
 }

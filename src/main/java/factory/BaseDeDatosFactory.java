@@ -25,10 +25,6 @@ public abstract class BaseDeDatosFactory {
             case 2:
                 instance = DERBYFactory.getInstance();
                 break;
-            case 3:
-                //instance = DBPostgres.getInstance();
-                System.out.println("Selection POSTGRES_JDBC");
-                break;
             default:
                 System.out.println("Numero no valid.");
                 instance = DBMySql.getInstance();

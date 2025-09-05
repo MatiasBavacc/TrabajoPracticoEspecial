@@ -10,25 +10,19 @@ import dao.interfaces.FacturaDaoInterface;
 import entities.Factura;
 
 public class FacturaDao implements FacturaDaoInterface<Factura>{
-	
-	@Override
+
+    @Override
     public void createTable(Connection conn) throws Exception {
         System.out.println();
         System.out.println("	Creando la tabla (Factura) ...");
-        System.out.println();
-        String sql = "CREATE TABLE factura ( " +
+        String sql = "CREATE TABLE IF NOT EXISTS factura ( " +
                 "idFactura INT PRIMARY KEY, " +
-                "idCliente INT ) ";
+                "idCliente INT NOT NULL ) ";
         try {
             conn.prepareStatement(sql).execute();
             conn.commit();
         } catch (SQLException e) {
-            if (e.getSQLState().equals("X0Y32")) { // X0Y32 = "Table already exists..."
-                System.out.println("	La tabla Factura ya existía, se continúa...");
-                conn.rollback();
-            } else {
-                throw e; // if he threw other errors
-            }
+            throw new RuntimeException("Error al intentar crear la tabla Producto" + e);
         }
     }
 
@@ -36,7 +30,6 @@ public class FacturaDao implements FacturaDaoInterface<Factura>{
     public void loadCSVData(List<Factura> data, Connection conn) throws Exception {
         System.out.println();
         System.out.println("	Cargando los datos (Factura) ...");
-        System.out.println();
         // 1) Empty the table before inserting
         String deleteSQL = "DELETE FROM factura";
         try (PreparedStatement psDelete = conn.prepareStatement(deleteSQL)) {
@@ -60,16 +53,15 @@ public class FacturaDao implements FacturaDaoInterface<Factura>{
     public void listTable(Connection conn) throws Exception {
         System.out.println();
         System.out.println("	Listando los datos (Factura) ...");
-        System.out.println();
         String sql = "SELECT idFactura, idCliente FROM factura";
         try (PreparedStatement ps = conn.prepareStatement(sql);
              ResultSet rs = ps.executeQuery()) {
-            System.out.println("idFactura \t| idCliente");
-            System.out.println("---------------------------------------------------------------------------------");
+            System.out.println("idFactura \t | idCliente");
+            System.out.println("--------------------------------------");
             while (rs.next()) {
                 int idFactura = rs.getInt("idFactura");
                 int idCliente = rs.getInt("idCliente");
-                System.out.println(idFactura + " \t| " + idCliente);
+                System.out.println(idFactura + " \t \t | " + idCliente);
             }
         }
         conn.commit();
@@ -79,7 +71,6 @@ public class FacturaDao implements FacturaDaoInterface<Factura>{
     public void dropTable(Connection conn) throws Exception {
         System.out.println();
         System.out.println("	Borrando la tabla (Factura) ...");
-        System.out.println();
         String sql = "DROP TABLE factura";
         try (PreparedStatement ps = conn.prepareStatement(sql)) {
             ps.execute();
