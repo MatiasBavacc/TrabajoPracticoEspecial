@@ -66,7 +66,7 @@ src/
  └── main/java/entities    # Entidades del sistema (Producto, Compra)
  └── main/java/factory     # Conexion con la db
  └── main/java/main        # Pruebas de funcionamiento
- └── main/utils            # Utilidades para llenar la db
+ └── main/java/utils            # Utilidades para llenar la db
  └── main/resources        # Archivos de configuración (scv)
 ```
 
@@ -78,5 +78,5 @@ src/
 |-----------|----------|-------------|-------------------------------|--------|
 | Matías    | Bava     | 38.961.362  | matiasbavacc@gmail.com        | Tandil |
 | Alejandro | Garay    | 18.038.228  | alejandrogaray1966@gmail.com  | Tandil |
-| Agustin   | Rypstra  | 42117730    | agusrypstra@gmail.com         | Tandil |
+| Agustin   | Rypstra  | 42.117.730  | agusrypstra@gmail.com         | Tandil |
 | Diego     | Navarro  | ********    | *********************         | Tandil |
