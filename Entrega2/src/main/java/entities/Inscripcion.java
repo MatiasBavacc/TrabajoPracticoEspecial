@@ -1,17 +1,15 @@
 package entities;
 
-
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Column;
-import jakarta.persistence.ManyToOne;
-
+import jakarta.persistence.*;
 import java.io.Serializable;
 
 @Entity
 public class Inscripcion implements Serializable {
+	
+	// Java requiere que las clases serializables definan un identificador de versión 
+	// para asegurar la compatibilidad durante la serialización y deserialización a lo largo del tiempo
+	private static final long serialVersionUID = 1L;
+	
     // Atributos
     @Id
     private int idInscripcion;

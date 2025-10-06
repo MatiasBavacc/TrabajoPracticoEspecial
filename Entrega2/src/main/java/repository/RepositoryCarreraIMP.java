@@ -5,11 +5,11 @@ import entities.Carrera;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Query;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class RepositoryCarreraIMP implements RepositoryCarrera{
+	
     private EntityManagerFactory emf;
     private EntityManager em;
     private static RepositoryCarreraIMP instance;
@@ -39,7 +39,7 @@ public class RepositoryCarreraIMP implements RepositoryCarrera{
         em.close();
         // Verificación posterior al guardado
         em = emf.createEntityManager();
-        Carrera savedCarrera = em.find(Carrera.class, c.getIdCarrera());
+//        Carrera savedCarrera = em.find(Carrera.class, c.getIdCarrera());
 //        if (savedCarrera != null) {
 //            System.out.println("La carrera se guardó correctamente: " + savedCarrera.getNombreCarrera());
 //        } else {
@@ -67,12 +67,13 @@ public class RepositoryCarreraIMP implements RepositoryCarrera{
                         "ORDER BY COUNT(a) DESC"
         );
 
+        @SuppressWarnings("unchecked")
         List<Object[]> resultados = q.getResultList();
         List<DTOInscriptosCarrera> inscriptosPorCarrera = new ArrayList<>();
 
         for (Object[] resultado : resultados) {
             String nombreCarrera = (String) resultado[0];
-            long cantidadEstudiantes = ((Long) resultado[1]).intValue();
+            long cantidadEstudiantes = (Long) resultado[1]; 
             DTOInscriptosCarrera dto = new DTOInscriptosCarrera(nombreCarrera, cantidadEstudiantes);
             inscriptosPorCarrera.add(dto);
         }

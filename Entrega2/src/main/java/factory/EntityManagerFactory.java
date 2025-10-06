@@ -3,10 +3,10 @@ package factory;
 import repository.RepositoryCarreraIMP;
 import repository.RepositoryEstudianteIMP;
 import repository.RepositoryInscripcionIMP;
-
 import java.sql.SQLException;
 
 public abstract class EntityManagerFactory {
+	
     public static final int MYSQL = 1;
 
     public abstract RepositoryCarreraIMP getCarreraRepository();

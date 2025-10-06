@@ -1,13 +1,16 @@
 package entities;
 
 import jakarta.persistence.*;
-
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
 public class Carrera implements Serializable {
+	
+		// Java requiere que las clases serializables definan un identificador de versión 
+		// para asegurar la compatibilidad durante la serialización y deserialización a lo largo del tiempo
+		private static final long serialVersionUID = 1L;
 
         //Atributos
         @Id

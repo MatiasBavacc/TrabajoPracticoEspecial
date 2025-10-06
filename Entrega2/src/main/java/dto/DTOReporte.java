@@ -3,10 +3,10 @@ package dto;
 public class DTOReporte {
     private String nombreCarrera;
     private Integer fechaEgreso;
-    private Integer cantInscriptos;
-    private Integer cantGraduados;
+    private Long cantInscriptos;
+    private Long cantGraduados;
 
-    public DTOReporte(String nombreCarrera, Integer fechaEgreso, Integer cantInscriptos, Integer cantGraduados) {
+    public DTOReporte(String nombreCarrera, Integer fechaEgreso, Long cantInscriptos, Long cantGraduados) {
         this.nombreCarrera = nombreCarrera;
         this.fechaEgreso = fechaEgreso;
         this.cantInscriptos = cantInscriptos;
@@ -26,22 +26,22 @@ public class DTOReporte {
     }
 
     public void setFechaEgreso(Integer anio) {
-        this.fechaEgreso = fechaEgreso;
+        this.fechaEgreso = anio;
     }
 
-    public Integer getCantInscriptos() {
+    public Long getCantInscriptos() {
         return cantInscriptos;
     }
 
-    public void setCantInscriptos(Integer cantInscriptos) {
+    public void setCantInscriptos(Long cantInscriptos) {
         this.cantInscriptos = cantInscriptos;
     }
 
-    public Integer getCantGraduados() {
+    public Long getCantGraduados() {
         return cantGraduados;
     }
 
-    public void setCantGraduados(Integer cantGraduados) {
+    public void setCantGraduados(Long cantGraduados) {
         this.cantGraduados = cantGraduados;
     }
 

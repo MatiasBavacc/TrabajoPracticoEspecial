@@ -2,7 +2,6 @@ package repository;
 
 import dto.DTOInscriptosCarrera;
 import entities.Carrera;
-
 import java.util.List;
 
 public interface RepositoryCarrera {

@@ -4,7 +4,6 @@ import entities.Carrera;
 import entities.Estudiante;
 import entities.Inscripcion;
 import org.apache.commons.csv.CSVRecord;
-
 import java.io.IOException;
 import java.text.ParseException;
 import java.util.LinkedList;
@@ -33,7 +32,6 @@ public class CSVInsripcion extends CSVReader{
 
             int antiguedad = Integer.parseInt(record.get(5));
 
-
             // Se crea un objeto Inscripcion por cada registro
             Inscripcion inscripcion = new Inscripcion(idInscripcion,
                     carrera,
@@ -43,12 +41,6 @@ public class CSVInsripcion extends CSVReader{
                     antiguedad);
             inscripciones.add(inscripcion);
         }
-
-
-//        System.out.println("-------------------------------------------------------");
-//        System.out.println("Se cargaron " + inscripciones.size() + " inscripciones.");
-//        System.out.println("--------------------------------------------------------");
-
 
         return inscripciones;
     }

@@ -6,6 +6,7 @@ import repository.RepositoryEstudianteIMP;
 import repository.RepositoryInscripcionIMP;
 
 public class MySqlFactory extends EntityManagerFactory {
+	
     private static MySqlFactory instance;
     private jakarta.persistence.EntityManagerFactory emf;
 

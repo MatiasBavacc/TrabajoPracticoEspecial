@@ -38,7 +38,7 @@ public class RepositoryInscripcionIMP implements RepositoryInscripcion {
 
         // Verificación posterior al guardado
         em = emf.createEntityManager();
-        Inscripcion savedInscripcion = em.find(Inscripcion.class, i.getIdInscripcion());
+//        Inscripcion savedInscripcion = em.find(Inscripcion.class, i.getIdInscripcion());
 //        if (savedInscripcion != null) {
 //            System.out.println("La inscripción se guardó correctamente con ID: " + savedInscripcion.getIdInscripcion());
 //        } else {
@@ -52,30 +52,32 @@ public class RepositoryInscripcionIMP implements RepositoryInscripcion {
         em = emf.createEntityManager();
 
         String query =
-                "SELECT fj.nombreCarrera, fj.anio, SUM(fj.inscriptos), SUM(fj.graduado)\r\n"
-                        + "FROM\r\n"
-                        + "    (\r\n"
-                        + "        SELECT c.nombreCarrera, EXTRACT(YEAR FROM i.fechaInscripcion) as anio, 0 as inscriptos, COUNT(*) as graduado\r\n"
-                        + "        FROM Inscripcion i JOIN Carrera c ON c.idCarrera = i.carrera_idCarrera\r\n"
-                        + "        GROUP BY c.nombreCarrera, anio\r\n"
-                        + "        UNION\r\n"
-                        + "        SELECT c.nombreCarrera, YEAR(i.fechaEgreso) AS anio, COUNT(*) AS inscriptos, 0 as graduado\r\n"
-                        + "        FROM Inscripcion i JOIN Carrera c ON c.idCarrera = i.carrera_idCarrera\r\n"
-                        + "        GROUP BY c.nombreCarrera, anio HAVING anio IS NOT NULL\r\n"
-                        + "    ) as fj\r\n"
-                        + "GROUP BY fj.nombreCarrera, fj.anio\r\n"
-                        + "ORDER BY fj.nombreCarrera, fj.anio";
+                "SELECT fj.nombreCarrera, fj.anio, SUM(fj.inscriptos) AS totalInscriptos, SUM(fj.graduados) AS totalGraduados " +
+                "FROM (" + // <-- ¡Paréntesis de apertura CRÍTICO!
+                    // 1. Inscritos (usando el campo i.fechaInscripcion directamente como anio)
+                    "SELECT c.nombreCarrera, i.fechaInscripcion AS anio, COUNT(*) AS inscriptos, 0 AS graduados " +
+                    "FROM Inscripcion i JOIN Carrera c ON c.idCarrera = i.carrera_idCarrera " +
+                    "GROUP BY c.nombreCarrera, anio " +
+                    "UNION ALL " +
+                    // 2. Graduados (usando el campo i.fechaEgreso directamente como anio)
+                    "SELECT c.nombreCarrera, i.fechaEgreso AS anio, 0 AS inscriptos, COUNT(*) AS graduados " +
+                    "FROM Inscripcion i JOIN Carrera c ON c.idCarrera = i.carrera_idCarrera " +
+                    "WHERE i.fechaEgreso IS NOT NULL " +
+                    "GROUP BY c.nombreCarrera, anio " +
+                ") AS fj " + // <-- ¡Paréntesis de cierre CRÍTICO!
+                "GROUP BY fj.nombreCarrera, fj.anio " +
+                "ORDER BY fj.nombreCarrera, fj.anio";
 
+        @SuppressWarnings("unchecked")
         List<Object[]> queryList = em.createNativeQuery(query).getResultList();
         List<DTOReporte> report = new ArrayList<>();
 
         for (Object[] queryListRow : queryList) {
-            DTOReporte r = new DTOReporte(
-                    (String) queryListRow[0],  // nombreCarrera
-                    ((Integer) queryListRow[1]), // anio
-                    ((Integer) queryListRow[2]), // inscriptos
-                    ((Integer) queryListRow[3])  // graduados
-            );
+            String nombreCarrera = (String) queryListRow[0];
+            Integer anio = ((Number) queryListRow[1]).intValue();
+            Long inscriptos = ((Number) queryListRow[2]).longValue();
+            Long graduados = ((Number) queryListRow[3]).longValue(); 
+            DTOReporte r = new DTOReporte( nombreCarrera, anio, inscriptos, graduados);
             report.add(r);
         }
 

@@ -1,19 +1,17 @@
 package entities;
 
-import jakarta.persistence.Id;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
-import jakarta.persistence.OneToMany;
-
+import jakarta.persistence.*;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
 public class Estudiante implements Serializable {
+	
+	// Java requiere que las clases serializables definan un identificador de versión 
+	// para asegurar la compatibilidad durante la serialización y deserialización a lo largo del tiempo
+	private static final long serialVersionUID = 1L;
+	
     @Id
     private int dni;
 

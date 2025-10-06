@@ -39,7 +39,7 @@ public class RepositoryEstudianteIMP implements RepositoryEstudiante {
 
         // Verificación posterior al guardado
         em = emf.createEntityManager();
-        Estudiante savedAlumno = em.find(Estudiante.class, a.getIdEstudiante());  // Recupera el objeto por ID
+//        Estudiante savedAlumno = em.find(Estudiante.class, a.getIdEstudiante());  // Recupera el objeto por ID
 //        if (savedAlumno != null) {
 //            System.out.println("El alumno se guardó correctamente: " +
 //                    "Nombre: "+savedAlumno.getNombre()+
@@ -54,6 +54,7 @@ public class RepositoryEstudianteIMP implements RepositoryEstudiante {
     public List<DTOEstudiante> getAll() {
         em = emf.createEntityManager();
         Query query = em.createQuery("SELECT a FROM Estudiante a ORDER BY a.apellido");
+        @SuppressWarnings("unchecked")
         List<Estudiante> alumnos = query.getResultList();
         List<DTOEstudiante> alumnosDTOList = this.crearDTOAlumnos(alumnos);
         em.close();
@@ -86,6 +87,7 @@ public class RepositoryEstudianteIMP implements RepositoryEstudiante {
         em = emf.createEntityManager();
         Query q = em.createQuery("SELECT a FROM Estudiante a WHERE a.genero = :genero");
         q.setParameter("genero", genero);
+        @SuppressWarnings("unchecked")
         List<Estudiante> alumnos = q.getResultList();
         List<DTOEstudiante> alumnosByGenero = this.crearDTOAlumnos(alumnos);
         em.close();
@@ -98,6 +100,7 @@ public class RepositoryEstudianteIMP implements RepositoryEstudiante {
         Query q = em.createQuery("SELECT a FROM Estudiante a, IN(a.inscripciones) i WHERE i.carrera.id = :idCarrera AND a.ciudad = :ciudadOrigen");
         q.setParameter("idCarrera", idCarrera);
         q.setParameter("ciudadOrigen", ciudad);
+        @SuppressWarnings("unchecked")
         List<Estudiante> alumnos = q.getResultList();
         List<DTOEstudiante> alumnosByCarreraCiudad = this.crearDTOAlumnos(alumnos);
         em.close();

@@ -2,7 +2,6 @@ package repository;
 
 import dto.DTOEstudiante;
 import entities.Estudiante;
-
 import java.util.List;
 
 public interface RepositoryEstudiante {

@@ -23,6 +23,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class Main {
+	
     private static RepositoryCarreraIMP carreraRepo;
     private static RepositoryEstudianteIMP alumnoRepo;
     private static RepositoryInscripcionIMP inscripcionRepo;
@@ -45,12 +46,12 @@ public class Main {
         LinkedList<Inscripcion> inscripciones = new CSVInsripcion(filePath +
                 "/src/main/resources/csv/estudianteCarrera.csv").getInscripciones();
         for (Inscripcion i : inscripciones) {
-//            System.out.println(inscripciones);
             inscripcionRepo.save(i);
         }
     }
 
     public static void main(String[] args) throws ParseException, IOException, SQLException {
+    	
         Logger.getLogger("org.hibernate").setLevel(Level.SEVERE); // Sólo se imprimen errores severos
 
         EntityManagerFactory mysqlFactory = EntityManagerFactory.getDAOFactory(EntityManagerFactory.MYSQL);
@@ -71,7 +72,6 @@ public class Main {
         Estudiante a1 = new Estudiante(55555555,"Sergio", "Zurich",35,"Masculino","Tandil",123456);
         alumnoRepo.save(a1);
         System.out.println("Se dio de alta al estudiante: " + a1);
-
 
         // 2B) Matricular un estudiante en una carrera.
         System.out.println("\n2B) Matricular un estudiante en una carrera.");
@@ -114,7 +114,6 @@ public class Main {
             System.out.println(s);
         }
 
-
         // 3) Generar un reporte de las carreras, que para cada carrera incluya información de los inscriptos
         // y egresados por año. Se deben ordenar las carreras alfabeticamente, y presentar los años de manera
         // cronológica.
@@ -124,6 +123,8 @@ public class Main {
         for (DTOReporte i : inscripcionRepo.crearInforme()){
             System.out.println(i);
         }
+        
+        System.out.println("\n                                                   --- FIN ---");
     }
 
 }
