@@ -1,7 +1,7 @@
 # Trabajo Práctico Especial :computer:
 
 
-##Primera entrega:
+## Primera entrega:
 
 - [x] Proyecto Java orientado a la persistencia de datos usando **JDBC** y **DAO pattern**.
 - [x] Gestión de entidades (Productos, Compras, etc.) conectadas a una base de datos **MySQL**.
@@ -76,7 +76,7 @@ src/
 ---
 
 
-##Segunda entrega:
+## Segunda entrega:
 
 
 
