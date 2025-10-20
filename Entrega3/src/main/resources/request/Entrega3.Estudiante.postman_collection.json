@@ -1,0 +1,227 @@
+{
+	"info": {
+		"_postman_id": "49e7780b-d0a5-4af0-8a48-f60131cf9303",
+		"name": "Entrega3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39397877"
+	},
+	"item": [
+		{
+			"name": "estudiante ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/estudiante/26647604",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"estudiante",
+						"26647604"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "estudiante ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/estudiante/26647604",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"estudiante",
+								"26647604"
+							]
+						}
+					},
+					"_postman_previewlanguage": "",
+					"header": [],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "estudiantes Libreta",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/estudiante/nroLibreta/56957",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"estudiante",
+						"nroLibreta",
+						"56957"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "estudiantes Ordenar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/estudiante/ordenar?criterio=nombre",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"estudiante",
+						"ordenar"
+					],
+					"query": [
+						{
+							"key": "criterio",
+							"value": "nombre"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Estudiante",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Carlos\",\r\n    \"apellido\": \"Troque\",\r\n    \"edad\": 40,\r\n    \"genero\": \"Masculino\",\r\n    \"dni\": 38961361,\r\n    \"ciudad\": \"Tandil\",\r\n    \"nroLibreta\": 99992\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/estudiante/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"estudiante",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "estudiantes Genero",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/estudiante/genero/masculino",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"estudiante",
+						"genero",
+						"masculino"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "estudiantes filtro",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/estudiante/filtro?carrera=medicina&ciudad=gradac",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"estudiante",
+						"filtro"
+					],
+					"query": [
+						{
+							"key": "carrera",
+							"value": "medicina"
+						},
+						{
+							"key": "ciudad",
+							"value": "gradac"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "estudiantes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/estudiante/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"estudiante",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "estudiantes ordenar DNI",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/estudiante/ordenar?criterio=dni",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"estudiante",
+						"ordenar"
+					],
+					"query": [
+						{
+							"key": "criterio",
+							"value": "dni"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

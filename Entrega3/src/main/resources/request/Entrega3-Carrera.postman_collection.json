@@ -1,0 +1,50 @@
+{
+	"info": {
+		"_postman_id": "7e2c6814-ea74-46ad-ae0f-9080aedcc2fd",
+		"name": "Entrega3-Carrera",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39397877"
+	},
+	"item": [
+		{
+			"name": "carreras",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/carrera/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"carrera",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "inscriptos x carrera",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/carrera/inscriptos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"carrera",
+						"inscriptos"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
