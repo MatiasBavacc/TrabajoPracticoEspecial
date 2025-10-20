@@ -125,6 +125,66 @@ src/
 ![DIAGRAMA DE CLASES](Entrega2/diagrama/diagrama-de-clases.png)
 
 
+## Tercera entrega:
+
+### Tecnologías Utilizadas
+
+- **Java 22**
+- **Spring Boot 3.3.0**
+    - Spring Data JPA
+    - Spring Web
+    - Spring Boot DevTools
+- **Hibernate 6.5.2** (con MySQL Dialect)
+- **MySQL 8.0+**
+- **Maven** - Gestión de dependencias
+- **Lombok** - Reducción de código boilerplate
+- **Apache Commons CSV 1.8** - Procesamiento de archivos CSV
+- **Arquitectura REST** - API RESTful con ResponseEntity
+
+### API Endpoints
+
+#### Estudiante
+
+| Método | Endpoint | Descripción | Parámetros |
+|--------|----------|-------------|------------|
+| **GET** | `/estudiante/` | Obtener todos los estudiantes | - |
+| **GET** | `/estudiante/{id}` | Obtener estudiante por DNI | `id`: DNI del estudiante |
+| **GET** | `/estudiante/ordenar` | Obtener estudiantes ordenados | `criterio`: nombre, apellido, edad, dni, ciudad, etc. |
+| **GET** | `/estudiante/nroLibreta/{nroLibreta}` | Buscar por número de libreta | `nroLibreta`: número único |
+| **GET** | `/estudiante/genero/{genero}` | Filtrar por género | `genero`: Masculino/Femenino |
+| **GET** | `/estudiante/filtro` | Filtrar por carrera y ciudad | `carrera`, `ciudad` |
+| **POST** | `/estudiante/` | Crear nuevo estudiante | JSON body |
+
+#### Carrera
+
+| Método | Endpoint              | Descripción |
+|--------|-----------------------|-------------|
+| **GET** | `/carrera/`           | Obtener todas las carreras |
+| **GET** | `/carrera/inscriptos` | Carreras ordenadas por cantidad de inscriptos |
+
+#### Inscripcion
+
+| Método | Endpoint                         | Descripción | Parámetros |
+|--------|----------------------------------|-------------|------------|
+| **POST** | `/inscripcion/matricular`        | Matricular estudiante en carrera | `estudianteId`, `carreraId` |
+| **GET** | `/inscripcion/reportes` | Reporte de carreras con inscriptos/egresados por año | - |
+
+#### Codigos de estado HTTP
+
+- **200 OK**: Solicitud exitosa
+- **201 CREATED**: Recurso creado exitosamente
+- **204 NO CONTENT**: Solicitud exitosa pero sin contenido para devolver
+- **404 NOT FOUND**: Recurso no encontrado
+- **500 INTERNAL SERVER ERROR**: Error del servidor
+
+#### Comprobacion en Postman
+- Importar la colección Postman desde `Entrega3/src/resources/request/`.
+- La url por defecto es `http://localhost:8080/`.
+- [!Postman Collection Estudiante](Entrega3/src/resources/request/Entrega3.Estudiante.postman_collection.json)
+- [!Postman Collection Carrera](Entrega3/src/resources/request/Entrega3-Carrera.postman_collection.json)
+- [!Postman Collection Inscripcion](Entrega3/src/resources/request/Entrega3-Inscripcion.postman_collection.json)
+
+
 
 ## Autores
 
