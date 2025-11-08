@@ -180,9 +180,9 @@ src/
 #### Comprobacion en Postman
 - Importar la colección Postman desde `Entrega3/src/resources/request/`.
 - La url por defecto es `http://localhost:8080/`.
-- [!Postman Collection Estudiante](Entrega3/src/resources/request/Entrega3.Estudiante.postman_collection.json)
-- [!Postman Collection Carrera](Entrega3/src/resources/request/Entrega3-Carrera.postman_collection.json)
-- [!Postman Collection Inscripcion](Entrega3/src/resources/request/Entrega3-Inscripcion.postman_collection.json)
+- [Postman Collection Estudiante](Entrega3/src/main/resources/request/Entrega3.Estudiante.postman_collection.json)
+- [Postman Collection Carrera](Entrega3/src/main/resources/request/Entrega3-Carrera.postman_collection.json)
+- [Postman Collection Inscripcion](Entrega3/src/main/resources/request/Entrega3-Inscripcion.postman_collection.json)
 
 
 
