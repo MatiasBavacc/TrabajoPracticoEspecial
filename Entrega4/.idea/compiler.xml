@@ -10,12 +10,12 @@
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.42/lombok-1.18.42.jar" />
         </processorPath>
         <module name="monopatin" />
+        <module name="paradas" />
         <module name="facturacion" />
         <module name="tarifas" />
         <module name="cuenta" />
         <module name="admin" />
         <module name="usuario" />
-        <module name="viajes" />
       </profile>
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -23,7 +23,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="gateway" />
       </profile>
-      <profile name="Annotation profile for parada" enabled="true">
+      <profile name="Annotation profile for viajes" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
@@ -31,9 +31,12 @@
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.42/lombok-1.18.42.jar" />
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.42/lombok-1.18.42.jar" />
         </processorPath>
-        <module name="parada" />
+        <module name="viajes" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="parada" target="21" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
@@ -43,6 +46,7 @@
       <module name="gateway" options="-parameters" />
       <module name="monopatin" options="-parameters" />
       <module name="parada" options="-parameters" />
+      <module name="paradas" options="-parameters" />
       <module name="tarifas" options="-parameters" />
       <module name="usuario" options="-parameters" />
       <module name="viajes" options="-parameters" />

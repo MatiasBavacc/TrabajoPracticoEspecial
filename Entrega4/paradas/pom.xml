@@ -8,10 +8,10 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <groupId>grupo30</groupId>
-    <artifactId>viajes</artifactId>
+    <artifactId>paradas</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>viajes</name>
-    <description>viajes</description>
+    <name>paradas</name>
+    <description>paradas</description>
     <url/>
     <licenses>
         <license/>

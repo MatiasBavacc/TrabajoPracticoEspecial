@@ -24,7 +24,7 @@
         <module>viajes</module>
         <module>facturacion</module>
         <module>tarifas</module>
-        <module>parada</module>
+        <module>paradas</module>
     </modules>
 
     <properties>
