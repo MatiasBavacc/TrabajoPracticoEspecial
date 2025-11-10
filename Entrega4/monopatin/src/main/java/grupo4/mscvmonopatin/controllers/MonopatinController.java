@@ -2,7 +2,7 @@ package grupo4.mscvmonopatin.controllers;
 
 import grupo4.mscvmonopatin.dtos.MonopatinDTO;
 import grupo4.mscvmonopatin.dtos.MonopatinPatchDTO;
-import grupo4.mscvmonopatin.model.Monopatin;
+import grupo4.mscvmonopatin.entity.*;
 import grupo4.mscvmonopatin.services.MonopatinService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

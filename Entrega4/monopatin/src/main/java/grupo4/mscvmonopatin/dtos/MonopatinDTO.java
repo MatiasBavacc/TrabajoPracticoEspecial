@@ -1,7 +1,7 @@
 package grupo4.mscvmonopatin.dtos;
 
-import grupo4.mscvmonopatin.model.Estado;
-import grupo4.mscvmonopatin.model.Monopatin;
+import grupo4.mscvmonopatin.entity.EstadoMonopatin;
+import grupo4.mscvmonopatin.entity.Monopatin;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
@@ -12,15 +12,15 @@ import lombok.Setter;
 @AllArgsConstructor
 @RequiredArgsConstructor
 public class MonopatinDTO {
-    private Estado estado;
+    private EstadoMonopatin estado;
     private double latitud;
     private double longitud;
     private int kmRecorridos;
 
     public MonopatinDTO(Monopatin monopatin) {
-        this.estado = monopatin.getEstado();
+        this.estado = monopatin.getEstadoMonopatin();
         this.latitud = monopatin.getLatitud();
         this.longitud = monopatin.getLongitud();
-        this.kmRecorridos = monopatin.getKmRecorridos();
+        this.kmRecorridos = monopatin.getKm();
     }
 }

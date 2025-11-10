@@ -7,11 +7,11 @@
         <artifactId>Integrador4</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <groupId>grupo30</groupId>
+    <groupId>grupo4</groupId>
     <artifactId>paradas</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>paradas</name>
-    <description>paradas</description>
+    <description>mscvmonopatin</description>
     <url/>
     <licenses>
         <license/>

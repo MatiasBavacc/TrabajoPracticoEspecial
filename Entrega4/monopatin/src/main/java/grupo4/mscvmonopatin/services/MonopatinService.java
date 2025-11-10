@@ -2,8 +2,8 @@ package grupo4.mscvmonopatin.services;
 
 import grupo4.mscvmonopatin.dtos.MonopatinDTO;
 import grupo4.mscvmonopatin.dtos.MonopatinPatchDTO;
-import grupo4.mscvmonopatin.model.Estado;
-import grupo4.mscvmonopatin.model.Monopatin;
+import grupo4.mscvmonopatin.entity.*;
+import grupo4.mscvmonopatin.entity.*;
 import grupo4.mscvmonopatin.repository.MonopatinRepository;
 import grupo4.mscvmonopatin.services.exceptions.InvalidEstadoException;
 import grupo4.mscvmonopatin.services.exceptions.NotFoundException;
@@ -33,11 +33,11 @@ public class MonopatinService {
 
     @Transactional
     public MonopatinDTO save(Monopatin monopatin){
-        String estado = monopatin.getEstado().toString();
+        String estado = monopatin.getEstadoMonopatin().toString();
         // Si el estado no existe en el enum,tiro la exception
-        if(Estado.perteneceAlEnum(estado)==null){
-            throw new InvalidEstadoException(estado);
-        }
+//        if(EstadoMonopatin.perteneceAlEnum(estado)==null){
+//            throw new InvalidEstadoException(estado);
+//        }
 
         return new MonopatinDTO(repository.save(monopatin));
     }
@@ -56,13 +56,13 @@ public class MonopatinService {
                 .orElseThrow( () -> new NotFoundException("Monopatin",id));
 
         if(monopatinPatchDTO.estado()!=null)
-            monopatin.setEstado(monopatinPatchDTO.estado());
+            monopatin.setEstadoMonopatin(monopatinPatchDTO.estado());
         if(monopatinPatchDTO.latitud()!=null)
             monopatin.setLatitud(monopatinPatchDTO.latitud());
         if (monopatinPatchDTO.longitud()!=null)
             monopatin.setLongitud(monopatinPatchDTO.longitud());
-        if (monopatinPatchDTO.kmRecorridos()!=null)
-            monopatin.setKmRecorridos(monopatinPatchDTO.kmRecorridos());
+        if (monopatinPatchDTO.km()!=null)
+            monopatin.setKm(monopatinPatchDTO.km());
 
         return new MonopatinDTO(repository.save(monopatin));
     }
@@ -73,14 +73,15 @@ public class MonopatinService {
                 .orElseThrow( () -> new NotFoundException("Monopatin",id));
 
         // Si el estado no existe en el enum,tiro la exception
-        if(Estado.perteneceAlEnum(estado)==null){
-           throw new InvalidEstadoException(estado);
-        }
-        // Seteo el estado del monopatin
-        else{
-            monopatin.setEstado(Estado.perteneceAlEnum(estado));
-            return new MonopatinDTO(repository.save(monopatin));
-        }
+//        if(EstadoMonopatin.perteneceAlEnum(estado)==null){
+//           throw new InvalidEstadoException(estado);
+//        }
+//        // Seteo el estado del monopatin
+//        else{
+////            monopatin.setEstadoMonopatin(EstadoMonopatin.perteneceAlEnum(estado));
+//            return new MonopatinDTO(repository.save(monopatin));
+//        }
+        return null;
     }
 
 

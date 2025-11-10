@@ -1,0 +1,10 @@
+INSERT INTO monopatin (patente, latitud, longitud, km, horas, estado_monopatin) VALUES ('TND001', -37.3215, -59.1338, 120, 15.5, 'ESTACIONADO');
+INSERT INTO monopatin (patente, latitud, longitud, km, horas, estado_monopatin) VALUES ('TND002', -37.3220, -59.1352, 240, 20.1, 'VIAJE');
+INSERT INTO monopatin (patente, latitud, longitud, km, horas, estado_monopatin) VALUES ('TND003', -37.3208, -59.1325, 85, 9.3, 'PAUSA');
+INSERT INTO monopatin (patente, latitud, longitud, km, horas, estado_monopatin) VALUES ('TND004', -37.3232, -59.1340, 310, 34.0, 'MANTENIMIENTO');
+INSERT INTO monopatin (patente, latitud, longitud, km, horas, estado_monopatin) VALUES ('TND005', -37.3241, -59.1310, 60, 8.7, 'ESTACIONADO');
+INSERT INTO monopatin (patente, latitud, longitud, km, horas, estado_monopatin) VALUES ('TND006', -37.3199, -59.1364, 175, 18.2, 'VIAJE');
+INSERT INTO monopatin (patente, latitud, longitud, km, horas, estado_monopatin) VALUES ('TND007', -37.3187, -59.1328, 490, 55.6, 'BAJA');
+INSERT INTO monopatin (patente, latitud, longitud, km, horas, estado_monopatin) VALUES ('TND008', -37.3250, -59.1373, 35, 5.4, 'PAUSA');
+INSERT INTO monopatin (patente, latitud, longitud, km, horas, estado_monopatin) VALUES ('TND009', -37.3264, -59.1332, 205, 22.0, 'ESTACIONADO');
+INSERT INTO monopatin (patente, latitud, longitud, km, horas, estado_monopatin) VALUES ('TND010', -37.3271, -59.1295, 95, 12.1, 'VIAJE');
