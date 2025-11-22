@@ -16,10 +16,14 @@ public class Cuenta {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private boolean estado;
-    private LocalDate fechaAlta;
-    private String tipoCuenta;
+    private Double monto;
 
-    @ManyToMany( mappedBy = "cuentas", cascade = CascadeType.ALL)
+    private TipoDeCuenta tipoCuenta;
+    @Column(name = "km_recorridos")
+    private Double kmRecorridos;
+    @Column(name = "fecua_limite_km")
+    private LocalDate fecuaLimiteKm;
+
+    @ManyToMany( mappedBy = "cuentas")
     private List<Usuario> usuarios;
 }

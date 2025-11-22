@@ -17,14 +17,17 @@ public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column
+    private String usuario;
+    private String password;
     private String nombre;
-    @Column
+    private String apellido;
     private String email;
-    @Column
+    private String celular;
+    @Enumerated(EnumType.STRING)
     private Rol rol;
+    private boolean habilitado;
 
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany
     List<Cuenta> cuentas;
 
 }

@@ -170,4 +170,17 @@ public class ParadaService {
         return salida;
     }
 
+    @Transactional
+    public ParadaDTO ubicarMonopatin(Long id){
+        Parada nueva = paradaRepository.ubicarMonopatin(id);
+
+        if (nueva == null){
+            return null;
+        }
+
+        return new ParadaDTO(nueva);
+    }
+
+
+
 }

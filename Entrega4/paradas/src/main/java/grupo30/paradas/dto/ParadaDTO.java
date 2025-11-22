@@ -1,5 +1,6 @@
 package grupo30.paradas.dto;
 
+import grupo30.paradas.entity.Parada;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -32,6 +33,15 @@ public class ParadaDTO {
         this.longitud = longitud;
         this.qr = null;
         this.disponibles = new ArrayList<>();
+    }
+
+    public ParadaDTO(Parada p){
+        this.id = p.getId();
+        this.nombre = p.getNombre();
+        this.latitud = p.getLatitud();
+        this.longitud = p.getLongitud();
+        this.qr = p.getQr();
+        this.disponibles = p.getDisponibles();
     }
 
     @Override

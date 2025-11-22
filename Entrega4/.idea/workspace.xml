@@ -5,18 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="723662e4-479d-4db5-9852-0ec9a71ebf68" name="Changes" comment="Implementado los microservicios de dani y el crud del microservicio de monopatines">
+      <change afterPath="$PROJECT_DIR$/usuario/src/main/java/grupo4/mscvusuario/entity/TipoDeCuenta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Entrega3/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Entrega3/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/copilotDiffState.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copilotDiffState.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/monopatin/src/main/java/grupo4/mscvmonopatin/MonopatinApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/monopatin/src/main/java/grupo30/mscvmonopatin/MonopatinApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/monopatin/src/main/java/grupo4/mscvmonopatin/controllers/MonopatinController.java" beforeDir="false" afterPath="$PROJECT_DIR$/monopatin/src/main/java/grupo30/mscvmonopatin/controllers/MonopatinController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/monopatin/src/main/java/grupo4/mscvmonopatin/dtos/MonopatinDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/monopatin/src/main/java/grupo30/mscvmonopatin/dtos/MonopatinDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/monopatin/src/main/java/grupo4/mscvmonopatin/dtos/MonopatinPatchDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/monopatin/src/main/java/grupo4/mscvmonopatin/entity/EstadoMonopatin.java" beforeDir="false" afterPath="$PROJECT_DIR$/monopatin/src/main/java/grupo30/mscvmonopatin/entity/EstadoMonopatin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/monopatin/src/main/java/grupo4/mscvmonopatin/entity/Monopatin.java" beforeDir="false" afterPath="$PROJECT_DIR$/monopatin/src/main/java/grupo30/mscvmonopatin/entity/Monopatin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/monopatin/src/main/java/grupo4/mscvmonopatin/repository/MonopatinRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/monopatin/src/main/java/grupo30/mscvmonopatin/repository/MonopatinRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/monopatin/src/main/java/grupo4/mscvmonopatin/services/MonopatinService.java" beforeDir="false" afterPath="$PROJECT_DIR$/monopatin/src/main/java/grupo30/mscvmonopatin/services/MonopatinService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/monopatin/src/main/java/grupo4/mscvmonopatin/services/exceptions/InvalidEstadoException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/monopatin/src/main/java/grupo4/mscvmonopatin/services/exceptions/NotFoundException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/monopatin/src/test/java/grupo4/mscvmonopatin/MscvMonopatinApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/monopatin/src/test/java/grupo30/mscvmonopatin/MscvMonopatinApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/paradas/src/main/java/grupo30/paradas/controller/ParadaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/paradas/src/main/java/grupo30/paradas/controller/ParadaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/paradas/src/main/java/grupo30/paradas/dto/ParadaDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/paradas/src/main/java/grupo30/paradas/dto/ParadaDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/paradas/src/main/java/grupo30/paradas/repository/ParadaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/paradas/src/main/java/grupo30/paradas/repository/ParadaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/paradas/src/main/java/grupo30/paradas/service/ParadaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/paradas/src/main/java/grupo30/paradas/service/ParadaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tarifas/src/main/java/grupo30/tarifas/repository/TarifaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/tarifas/src/main/java/grupo30/tarifas/repository/TarifaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usuario/src/main/java/grupo4/mscvusuario/entity/Cuenta.java" beforeDir="false" afterPath="$PROJECT_DIR$/usuario/src/main/java/grupo4/mscvusuario/entity/Cuenta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usuario/src/main/java/grupo4/mscvusuario/entity/Rol.java" beforeDir="false" afterPath="$PROJECT_DIR$/usuario/src/main/java/grupo4/mscvusuario/entity/Rol.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usuario/src/main/java/grupo4/mscvusuario/entity/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/usuario/src/main/java/grupo4/mscvusuario/entity/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usuario/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/usuario/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,9 +41,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="Interface" />
         <option value="Record" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -135,6 +138,9 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="grupo4.mscvusuario.entity" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Casa\Desktop\TrabajoPracticoEspecial\Entrega4\paradas\src\main\resources" />
       <recent name="C:\Users\Casa\Desktop\TrabajoPracticoEspecial\Entrega4\parada\src\main\java\grupo4\parada" />
@@ -161,8 +167,8 @@
               <entry key="GatewayApplication" value="STOPPED" />
               <entry key="MonopatinApplication" value="STOPPED" />
               <entry key="ParadasApplication" value="STOPPED" />
-              <entry key="TarifasApplication" value="STOPPED" />
-              <entry key="UsuarioApplication" value="STOPPED" />
+              <entry key="TarifasApplication" value="FAILED" />
+              <entry key="UsuarioApplication" value="FAILED" />
               <entry key="ViajesApplication" value="STOPPED" />
             </map>
           </value>
@@ -170,7 +176,7 @@
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.MonopatinApplication">
+  <component name="RunManager" selected="Spring Boot.ParadasApplication">
     <configuration name="AdminApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="admin" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="grupo4.mscvadmin.AdminApplication" />
@@ -272,7 +278,11 @@
       <workItem from="1762628361875" duration="2935000" />
       <workItem from="1762633742391" duration="16547000" />
       <workItem from="1762699315982" duration="26484000" />
-      <workItem from="1762809282243" duration="11802000" />
+      <workItem from="1762809282243" duration="14516000" />
+      <workItem from="1763085692689" duration="57000" />
+      <workItem from="1763127222963" duration="6883000" />
+      <workItem from="1763755392421" duration="15310000" />
+      <workItem from="1763842253348" duration="951000" />
     </task>
     <task id="LOCAL-00001" summary="Compose agregado con las 3 bases y un get y post en mongo en msvc-monpatin">
       <option name="closed" value="true" />

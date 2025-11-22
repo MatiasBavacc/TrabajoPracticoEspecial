@@ -34,7 +34,7 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: password
-      POSTGRES_DB: db_monopatines
+      POSTGRES_DB: usuarios
     restart: always
     volumes:
       - postgres_data:/var/lib/postgresql

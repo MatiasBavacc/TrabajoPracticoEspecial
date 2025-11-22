@@ -1,5 +1,6 @@
 package grupo30.paradas.repository;
 
+import grupo30.paradas.dto.EstacionarDTO;
 import grupo30.paradas.dto.ParadaDTO;
 import grupo30.paradas.entity.Parada;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -21,4 +22,13 @@ public interface ParadaRepository extends JpaRepository<Parada, Long> {
         """)
     List<Parada> findCercanos(@Param("latitud") Double latitud,
                               @Param("longitud") Double longitud);
+
+    @Query("""
+       SELECT p
+       FROM Parada p
+       WHERE :id IN elements(p.disponibles)
+       """)
+    Parada ubicarMonopatin(@Param("id") Long id);
+
+
 }

@@ -90,5 +90,11 @@ public class ParadaController {
         return ResponseEntity.status(HttpStatus.OK).body(paradaService.cercanos(coor));
     }
 
+    /* endpoint disponibles ok  */
+    @GetMapping("/monopatin/id/{id}")
+    public ResponseEntity<?> ubicar(@PathVariable Long id) {
+        return ResponseEntity.status(HttpStatus.OK).body(paradaService.ubicarMonopatin(id));
+    }
+
 }
 
