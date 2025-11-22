@@ -28,6 +28,11 @@ public class Usuario {
     private boolean habilitado;
 
     @ManyToMany
+    @JoinTable(
+            name = "usuario_cuentas",
+            joinColumns = @JoinColumn(name = "usuario_id"),
+            inverseJoinColumns = @JoinColumn(name = "cuenta_id")
+    )
     List<Cuenta> cuentas;
 
 }

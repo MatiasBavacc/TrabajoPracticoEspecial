@@ -5,21 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="723662e4-479d-4db5-9852-0ec9a71ebf68" name="Changes" comment="Implementado los microservicios de dani y el crud del microservicio de monopatines">
-      <change afterPath="$PROJECT_DIR$/usuario/src/main/java/grupo4/mscvusuario/entity/TipoDeCuenta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Entrega3/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Entrega3/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/copilotDiffState.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copilotDiffState.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usuario/src/main/java/grupo4/mscvusuario/dto/UsuarioDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/paradas/src/main/java/grupo30/paradas/controller/ParadaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/paradas/src/main/java/grupo30/paradas/controller/ParadaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/paradas/src/main/java/grupo30/paradas/dto/ParadaDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/paradas/src/main/java/grupo30/paradas/dto/ParadaDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/paradas/src/main/java/grupo30/paradas/repository/ParadaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/paradas/src/main/java/grupo30/paradas/repository/ParadaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/paradas/src/main/java/grupo30/paradas/service/ParadaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/paradas/src/main/java/grupo30/paradas/service/ParadaService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tarifas/src/main/java/grupo30/tarifas/repository/TarifaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/tarifas/src/main/java/grupo30/tarifas/repository/TarifaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usuario/src/main/java/grupo4/mscvusuario/controllers/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/usuario/src/main/java/grupo4/mscvusuario/controllers/UsuarioController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/usuario/src/main/java/grupo4/mscvusuario/entity/Cuenta.java" beforeDir="false" afterPath="$PROJECT_DIR$/usuario/src/main/java/grupo4/mscvusuario/entity/Cuenta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usuario/src/main/java/grupo4/mscvusuario/entity/Rol.java" beforeDir="false" afterPath="$PROJECT_DIR$/usuario/src/main/java/grupo4/mscvusuario/entity/Rol.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/usuario/src/main/java/grupo4/mscvusuario/entity/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/usuario/src/main/java/grupo4/mscvusuario/entity/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usuario/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/usuario/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usuario/src/main/resources/import.sql" beforeDir="false" afterPath="$PROJECT_DIR$/usuario/src/main/resources/import.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,8 +158,8 @@
               <entry key="GatewayApplication" value="STOPPED" />
               <entry key="MonopatinApplication" value="STOPPED" />
               <entry key="ParadasApplication" value="STOPPED" />
-              <entry key="TarifasApplication" value="FAILED" />
-              <entry key="UsuarioApplication" value="FAILED" />
+              <entry key="TarifasApplication" value="STOPPED" />
+              <entry key="UsuarioApplication" value="STOPPED" />
               <entry key="ViajesApplication" value="STOPPED" />
             </map>
           </value>
@@ -282,7 +273,7 @@
       <workItem from="1763085692689" duration="57000" />
       <workItem from="1763127222963" duration="6883000" />
       <workItem from="1763755392421" duration="15310000" />
-      <workItem from="1763842253348" duration="951000" />
+      <workItem from="1763842253348" duration="6810000" />
     </task>
     <task id="LOCAL-00001" summary="Compose agregado con las 3 bases y un get y post en mongo en msvc-monpatin">
       <option name="closed" value="true" />

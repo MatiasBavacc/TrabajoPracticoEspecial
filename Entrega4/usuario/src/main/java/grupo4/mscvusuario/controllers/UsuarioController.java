@@ -15,6 +15,8 @@ import java.util.List;
 public class UsuarioController {
     @Autowired
     private UsuarioService usuarioService;
+
+
     @GetMapping("/")
     public ResponseEntity<List<Usuario>> findAll(){
         List<Usuario> usuarios = usuarioService.findAll();
@@ -23,4 +25,15 @@ public class UsuarioController {
         }
         return ResponseEntity.ok(usuarios);
     }
+
+    @GetMapping("/id/{id}")
+    public ResponseEntity<Usuario> findById(Long id){
+        Usuario usuario = usuarioService.findById(id);
+        if(usuario == null) {
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.ok(usuario);
+    }
+
+
 }
