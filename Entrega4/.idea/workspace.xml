@@ -5,11 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="723662e4-479d-4db5-9852-0ec9a71ebf68" name="Changes" comment="Implementado los microservicios de dani y el crud del microservicio de monopatines">
-      <change afterPath="$PROJECT_DIR$/usuario/src/main/java/grupo4/mscvusuario/dto/UsuarioDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usuario/src/main/java/grupo4/mscvusuario/controllers/CuentaController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usuario/src/main/java/grupo4/mscvusuario/dto/CuentaDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usuario/src/main/java/grupo4/mscvusuario/dto/CuentaDTOAux.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usuario/src/main/java/grupo4/mscvusuario/dto/UsuarioDTOAux.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usuario/src/main/java/grupo4/mscvusuario/repository/CuentaRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usuario/src/main/java/grupo4/mscvusuario/service/CuentaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/usuario/src/main/java/grupo4/mscvusuario/controllers/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/usuario/src/main/java/grupo4/mscvusuario/controllers/UsuarioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usuario/src/main/java/grupo4/mscvusuario/dto/UsuarioDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/usuario/src/main/java/grupo4/mscvusuario/dto/UsuarioDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/usuario/src/main/java/grupo4/mscvusuario/entity/Cuenta.java" beforeDir="false" afterPath="$PROJECT_DIR$/usuario/src/main/java/grupo4/mscvusuario/entity/Cuenta.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/usuario/src/main/java/grupo4/mscvusuario/entity/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/usuario/src/main/java/grupo4/mscvusuario/entity/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usuario/src/main/java/grupo4/mscvusuario/repository/UsuarioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/usuario/src/main/java/grupo4/mscvusuario/repository/UsuarioRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usuario/src/main/java/grupo4/mscvusuario/service/UsuarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/usuario/src/main/java/grupo4/mscvusuario/service/UsuarioService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/usuario/src/main/resources/import.sql" beforeDir="false" afterPath="$PROJECT_DIR$/usuario/src/main/resources/import.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,9 +42,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Record" />
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -274,6 +284,8 @@
       <workItem from="1763127222963" duration="6883000" />
       <workItem from="1763755392421" duration="15310000" />
       <workItem from="1763842253348" duration="6810000" />
+      <workItem from="1763862404222" duration="1453000" />
+      <workItem from="1763914444323" duration="17421000" />
     </task>
     <task id="LOCAL-00001" summary="Compose agregado con las 3 bases y un get y post en mongo en msvc-monpatin">
       <option name="closed" value="true" />

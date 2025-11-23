@@ -1,5 +1,6 @@
 package grupo4.mscvusuario.entity;
 
+import grupo4.mscvusuario.dto.UsuarioDTOAux;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -13,6 +14,7 @@ import java.util.List;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name = "usuario")
 public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -34,5 +36,15 @@ public class Usuario {
             inverseJoinColumns = @JoinColumn(name = "cuenta_id")
     )
     List<Cuenta> cuentas;
+
+    public Usuario(UsuarioDTOAux u) {
+        this.id = u.getId();
+        this.usuario = u.getUsuario();
+        this.nombre = u.getNombre();
+        this.email = u.getEmail();
+        this.celular = u.getCelular();
+        this.rol = u.getRol();
+        this.habilitado = u.getEstado();
+    }
 
 }
