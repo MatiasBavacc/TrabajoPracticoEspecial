@@ -4,13 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="723662e4-479d-4db5-9852-0ec9a71ebf68" name="Changes" comment="Implementado los microservicios de dani y el crud del microservicio de monopatines">
-      <change afterPath="$PROJECT_DIR$/usuario/src/main/java/grupo4/mscvusuario/dto/UsuarioDTO.java" afterDir="false" />
+    <list default="true" id="723662e4-479d-4db5-9852-0ec9a71ebf68" name="Changes" comment="Usuarios MicroServicio">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/viajes/src/main/java/grupo30/viajes/config/DataInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/viajes/src/main/java/grupo30/viajes/controllers/ViajeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/viajes/src/main/java/grupo30/viajes/dto/NuevoViajeDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/viajes/src/main/java/grupo30/viajes/dto/ViajeDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/viajes/src/main/java/grupo30/viajes/entity/DetalleViaje.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/viajes/src/main/java/grupo30/viajes/entity/Estado_viaje.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/viajes/src/main/java/grupo30/viajes/entity/Viaje.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/viajes/src/main/java/grupo30/viajes/repository/ViajeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/viajes/src/main/java/grupo30/viajes/service/ViajeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/viajes/src/main/resources/import.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usuario/src/main/java/grupo4/mscvusuario/controllers/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/usuario/src/main/java/grupo4/mscvusuario/controllers/UsuarioController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usuario/src/main/java/grupo4/mscvusuario/entity/Cuenta.java" beforeDir="false" afterPath="$PROJECT_DIR$/usuario/src/main/java/grupo4/mscvusuario/entity/Cuenta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usuario/src/main/java/grupo4/mscvusuario/entity/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/usuario/src/main/java/grupo4/mscvusuario/entity/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usuario/src/main/resources/import.sql" beforeDir="false" afterPath="$PROJECT_DIR$/usuario/src/main/resources/import.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/viajes/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/viajes/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/viajes/src/main/java/grupo4/viajes/ViajesApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/viajes/src/main/java/grupo30/viajes/ViajesApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/viajes/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/viajes/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/viajes/src/test/java/grupo4/viajes/ViajesApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/viajes/src/test/java/grupo30/viajes/ViajesApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,8 +63,8 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/MatiasSpacech/TpArquitectura.git&quot;,
-    &quot;accountId&quot;: &quot;3d410d32-784d-47f1-8c1b-8d2e9e5b7da0&quot;
+    &quot;url&quot;: &quot;https://github.com/MatiasBavacc/TrabajoPracticoEspecial.git&quot;,
+    &quot;accountId&quot;: &quot;12c0319a-fdca-4587-b438-1771ea53f678&quot;
   }
 }</component>
   <component name="HttpClientEndpointsTabState">
@@ -104,11 +117,12 @@
     &quot;Spring Boot.ParadasApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.TarifasApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.UsuarioApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ViajesApplication (1).executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.ViajesApplication.executor&quot;: &quot;Run&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Casa/Desktop/TrabajoPracticoEspecial/Entrega4/paradas/src/main/resources&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/valen/OneDrive/Escritorio/New folder/TrabajoPracticoEspecial/Entrega4/viajes/src/main/java/grupo30/viajes&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -133,10 +147,14 @@
       <recent name="grupo4.mscvusuario.entity" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\valen\OneDrive\Escritorio\New folder\TrabajoPracticoEspecial\Entrega4\viajes\src\main\java\grupo30\viajes" />
       <recent name="C:\Users\Casa\Desktop\TrabajoPracticoEspecial\Entrega4\paradas\src\main\resources" />
       <recent name="C:\Users\Casa\Desktop\TrabajoPracticoEspecial\Entrega4\parada\src\main\java\grupo4\parada" />
       <recent name="D:\USUARIO\Desktop\TUDAI\Arquitecturas Web\TpArquitectura\Integrador4\facturacion\src\main\java\grupo4\facturacion" />
       <recent name="D:\USUARIO\Desktop\TUDAI\Arquitecturas Web\TpArquitectura\Integrador4\tarifas\src\main\java\grupo4\tarifas" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="grupo30.viajes.controllers" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -148,26 +166,8 @@
         <option value="SpringBootApplicationConfigurationType" />
       </set>
     </option>
-    <option name="configurationStatuses">
-      <map>
-        <entry key="SpringBootApplicationConfigurationType">
-          <value>
-            <map>
-              <entry key="AdminApplication" value="STOPPED" />
-              <entry key="CuentaApplication" value="STOPPED" />
-              <entry key="GatewayApplication" value="STOPPED" />
-              <entry key="MonopatinApplication" value="STOPPED" />
-              <entry key="ParadasApplication" value="STOPPED" />
-              <entry key="TarifasApplication" value="STOPPED" />
-              <entry key="UsuarioApplication" value="STOPPED" />
-              <entry key="ViajesApplication" value="STOPPED" />
-            </map>
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ParadasApplication">
+  <component name="RunManager" selected="Spring Boot.ViajesApplication (1)">
     <configuration name="AdminApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="admin" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="grupo4.mscvadmin.AdminApplication" />
@@ -224,14 +224,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ViajesApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+    <configuration name="ViajesApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="viajes" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="grupo4.viajes.ViajesApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="grupo30.viajes.ViajesApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
+      <item itemvalue="Spring Boot.ViajesApplication (1)" />
       <item itemvalue="Spring Boot.AdminApplication" />
       <item itemvalue="Spring Boot.CuentaApplication" />
       <item itemvalue="Spring Boot.FacturacionApplication" />
@@ -240,17 +241,17 @@
       <item itemvalue="Spring Boot.ParadasApplication" />
       <item itemvalue="Spring Boot.TarifasApplication" />
       <item itemvalue="Spring Boot.UsuarioApplication" />
-      <item itemvalue="Spring Boot.ViajesApplication" />
     </list>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.23892.409" />
-        <option value="bundled-js-predefined-d6986cc7102b-e03c56caf84a-JavaScript-IU-252.23892.409" />
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.26775.15" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.26775.15" />
       </set>
     </attachedChunks>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="project-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="723662e4-479d-4db5-9852-0ec9a71ebf68" name="Changes" comment="" />
@@ -274,6 +275,11 @@
       <workItem from="1763127222963" duration="6883000" />
       <workItem from="1763755392421" duration="15310000" />
       <workItem from="1763842253348" duration="6810000" />
+      <workItem from="1763850674287" duration="119000" />
+      <workItem from="1763850836670" duration="8578000" />
+      <workItem from="1763860402897" duration="1816000" />
+      <workItem from="1763926278752" duration="7789000" />
+      <workItem from="1763934802467" duration="10769000" />
     </task>
     <task id="LOCAL-00001" summary="Compose agregado con las 3 bases y un get y post en mongo en msvc-monpatin">
       <option name="closed" value="true" />
@@ -283,7 +289,31 @@
       <option name="project" value="LOCAL" />
       <updated>1762318604981</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Usuarios MicroServicio">
+      <option name="closed" value="true" />
+      <created>1763860675952</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1763860675954</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Usuarios MicroServicio">
+      <option name="closed" value="true" />
+      <created>1763860891848</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1763860891848</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Usuarios MicroServicio">
+      <option name="closed" value="true" />
+      <created>1763861045217</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1763861045217</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -315,7 +345,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Compose agregado con las 3 bases y un get y post en mongo en msvc-monpatin" />
     <MESSAGE value="Implementado los microservicios de dani y el crud del microservicio de monopatines" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implementado los microservicios de dani y el crud del microservicio de monopatines" />
+    <MESSAGE value="Usuarios MicroServicio" />
+    <option name="LAST_COMMIT_MESSAGE" value="Usuarios MicroServicio" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
