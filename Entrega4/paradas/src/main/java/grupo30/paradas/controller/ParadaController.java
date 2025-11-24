@@ -37,6 +37,8 @@ public class ParadaController {
         if ( actual == null ) {
             return ResponseEntity.status(HttpStatus.OK).body(actual);
         }
+
+
         paradaService.eliminarParada(id);
         return ResponseEntity.ok(actual);
     }
@@ -61,6 +63,12 @@ public class ParadaController {
     /* endpoint estacionar ok */
     @PostMapping("/estacionar/{id}")
     public ResponseEntity<?> estacionarEnParada(@PathVariable Long id, @RequestBody EstacionarDTO monopatin) {
+        ParadaDTO existente = paradaService.ubicarMonopatin(monopatin.getMonopatinId());
+
+        if ( existente != null ) {
+            return ResponseEntity.status(HttpStatus.OK).body("El monopatin ya existe.");
+        }
+
         ParadaDTO estacionada = paradaService.estacionar(id, monopatin);
         if( estacionada == null ) {
             return ResponseEntity.status(HttpStatus.OK).body(estacionada);

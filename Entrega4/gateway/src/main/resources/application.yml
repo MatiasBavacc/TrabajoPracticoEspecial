@@ -22,25 +22,25 @@ spring:
             - id: monopatin
               uri: http://localhost:8084
               predicates:
-                - Path=/monopatines/**
+                - Path=/monopatin/**
 
             # Microservicio de Paradas
             - id: parada
               uri: http://localhost:8085
               predicates:
-                - Path=/paradas/**
+                - Path=/parada/**
 
             # Microservicio de Tarifas
             - id: tarifas
               uri: http://localhost:8086
               predicates:
-                - Path=/tarifas/**
+                - Path=/tarifa/**
 
             # Microservicio de Viajes
             - id: viajes
               uri: http://localhost:8088
               predicates:
-                - Path=/viajes/**
+                - Path=/viaje/**
 
             # Microservicio de Cuentas (puerto 8087)
             - id: cuenta
@@ -54,7 +54,10 @@ spring:
               predicates:
                 - Path=/usuario/**
 
-
+security:
+  jwt:
+    secret: j7ZookpUTYxclaULynjypGQVKMYXqOXMI+/1sQ2gOV1BF6VOHw6OzYj9RNZY4GcHAE3Igrah3MZ26oLrY/3y4Q==
+    expiration-ms: 86400000 # 1 día
 
 logging:
   level:

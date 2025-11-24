@@ -5,14 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="723662e4-479d-4db5-9852-0ec9a71ebf68" name="Changes" comment="Usuarios MicroServicio">
-      <change afterPath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/grupo30/gateway/Controller/JwtController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/grupo30/gateway/Controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/grupo30/gateway/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/grupo30/gateway/feignClients/UsuarioFeign.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/grupo30/gateway/feignModel/UserResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/grupo30/gateway/security/AuthotityConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/grupo30/gateway/security/DomainUserDetailsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/grupo30/gateway/security/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/grupo30/gateway/security/jwt/JwtFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/grupo30/gateway/security/jwt/TokenProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/grupo30/gateway/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/grupo30/gateway/service/dto/login/LoginDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/grupo30/gateway/service/dto/user/UserDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/grupo4/gateway/GatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/grupo30/gateway/GatewayApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/test/java/grupo4/gateway/GatewayApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/test/java/grupo30/gateway/GatewayApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/paradas/src/main/java/grupo30/paradas/controller/ParadaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/paradas/src/main/java/grupo30/paradas/controller/ParadaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/paradas/src/main/java/grupo30/paradas/service/ParadaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/paradas/src/main/java/grupo30/paradas/service/ParadaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usuario/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/usuario/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usuario/src/main/java/grupo4/mscvusuario/controllers/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/usuario/src/main/java/grupo4/mscvusuario/controllers/UsuarioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usuario/src/main/java/grupo4/mscvusuario/dto/UsuarioDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/usuario/src/main/java/grupo4/mscvusuario/dto/UsuarioDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usuario/src/main/java/grupo4/mscvusuario/entity/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/usuario/src/main/java/grupo4/mscvusuario/entity/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usuario/src/main/java/grupo4/mscvusuario/repository/UsuarioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/usuario/src/main/java/grupo4/mscvusuario/repository/UsuarioRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usuario/src/main/java/grupo4/mscvusuario/service/UsuarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/usuario/src/main/java/grupo4/mscvusuario/service/UsuarioService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usuario/src/main/resources/import.sql" beforeDir="false" afterPath="$PROJECT_DIR$/usuario/src/main/resources/import.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +127,7 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/valen/OneDrive/Escritorio/New folder/TrabajoPracticoEspecial/Entrega4/viajes/src/main/java/grupo30/viajes&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Casa/Desktop/TrabajoPracticoEspecial2/Entrega4/gateway/src/main/java/grupo30/gateway&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -136,11 +152,11 @@
       <recent name="grupo4.mscvusuario.entity" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Casa\Desktop\TrabajoPracticoEspecial2\Entrega4\gateway\src\main\java\grupo30\gateway" />
       <recent name="C:\Users\valen\OneDrive\Escritorio\New folder\TrabajoPracticoEspecial\Entrega4\viajes\src\main\java\grupo30\viajes" />
       <recent name="C:\Users\Casa\Desktop\TrabajoPracticoEspecial\Entrega4\paradas\src\main\resources" />
       <recent name="C:\Users\Casa\Desktop\TrabajoPracticoEspecial\Entrega4\parada\src\main\java\grupo4\parada" />
       <recent name="D:\USUARIO\Desktop\TUDAI\Arquitecturas Web\TpArquitectura\Integrador4\facturacion\src\main\java\grupo4\facturacion" />
-      <recent name="D:\USUARIO\Desktop\TUDAI\Arquitecturas Web\TpArquitectura\Integrador4\tarifas\src\main\java\grupo4\tarifas" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="grupo30.viajes.controllers" />
@@ -161,6 +177,10 @@
           <value>
             <map>
               <entry key="GatewayApplication" value="STOPPED" />
+              <entry key="ParadasApplication" value="STOPPED" />
+              <entry key="TarifasApplication" value="STOPPED" />
+              <entry key="UsuarioApplication" value="STOPPED" />
+              <entry key="ViajesApplication (1)" value="STOPPED" />
             </map>
           </value>
         </entry>
@@ -280,7 +300,8 @@
       <workItem from="1763860402897" duration="1816000" />
       <workItem from="1763926278752" duration="7789000" />
       <workItem from="1763934802467" duration="10769000" />
-      <workItem from="1763985808737" duration="1579000" />
+      <workItem from="1763985808737" duration="6891000" />
+      <workItem from="1763992878403" duration="10657000" />
     </task>
     <task id="LOCAL-00001" summary="Compose agregado con las 3 bases y un get y post en mongo en msvc-monpatin">
       <option name="closed" value="true" />
