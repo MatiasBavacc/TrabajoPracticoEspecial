@@ -20,7 +20,7 @@ public class UsuarioDTO {
     private String celular;
     private Boolean estado;
     private Rol rol;
-    List<Cuenta> cuentas;
+    List<CuentaDTOAux> cuentas;
 
     public UsuarioDTO(Usuario u) {
         id = u.getId();
@@ -30,8 +30,11 @@ public class UsuarioDTO {
         celular = u.getCelular();
         rol = u.getRol();
         estado = u.isHabilitado();
-        cuentas = u.getCuentas() ;
-    }
 
+        cuentas = new java.util.ArrayList<>();
+        for(Cuenta c: u.getCuentas()){
+            cuentas.add(new CuentaDTOAux(c));
+        }
+    }
 }
 

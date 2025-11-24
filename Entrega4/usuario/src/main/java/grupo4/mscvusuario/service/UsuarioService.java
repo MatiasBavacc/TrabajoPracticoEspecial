@@ -1,12 +1,13 @@
 package grupo4.mscvusuario.service;
 
+import grupo4.mscvusuario.dto.CuentaDTO;
 import grupo4.mscvusuario.dto.UsuarioDTO;
-import grupo4.mscvusuario.entity.Rol;
+import grupo4.mscvusuario.entity.Cuenta;
 import grupo4.mscvusuario.entity.Usuario;
 import grupo4.mscvusuario.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +16,10 @@ import java.util.List;
 public class UsuarioService {
     @Autowired
     private UsuarioRepository usuarioRepository;
+    @Autowired
+    private CuentaService cuentaService;
 
+    @Transactional
     public List<UsuarioDTO> findAll(){
         List<Usuario> usuarios = usuarioRepository.findAll();
         List<UsuarioDTO> usuarioDTOs = new ArrayList<>();
@@ -27,19 +31,81 @@ public class UsuarioService {
         return usuarioDTOs;
     }
 
+    @Transactional
     public UsuarioDTO findById(Long id){
         Usuario usuario = usuarioRepository.findById(id).orElse(null);
-        System.out.println("usuario: " + usuario);
         return new UsuarioDTO(usuario);
     }
 
+    @Transactional
     public Usuario save(Usuario usuario){
         return usuarioRepository.save(usuario);
     }
 
+    @Transactional
     public void delete(Long id){
+        Usuario actual = usuarioRepository.findById(id).orElse(null);
+
         usuarioRepository.deleteById(id);
+
+        List<CuentaDTO> cuentas = cuentaService.findCuentaByUser(id);
+        if(cuentas != null) {
+            for (CuentaDTO c : cuentas) {
+                c.getUsuarios().remove(actual);
+                cuentaService.saveCuenta(new Cuenta(c));
+            }
+        }
     }
 
+    @Transactional
+    public UsuarioDTO update(Usuario usuario) {
 
+        Usuario userExistente = usuarioRepository.findById(usuario.getId()).orElse(null);
+        if (userExistente == null) {
+            return null;
+        }
+
+        if( usuario.getId() != null && !usuario.getId().equals( userExistente.getId() ) ) {
+            userExistente.setId(usuario.getId());
+        }
+
+        if(usuario.getUsuario() != null && usuario.getUsuario() != "") {
+            userExistente.setUsuario(usuario.getUsuario());
+        }
+
+        if(usuario.getPassword() != null && usuario.getPassword() != "") {
+            userExistente.setPassword(usuario.getPassword());
+        }
+
+        if(usuario.getNombre() != null && usuario.getNombre() != "") {
+            userExistente.setNombre(usuario.getNombre());
+        }
+
+        if(usuario.getApellido() != null && usuario.getApellido() != "") {
+            userExistente.setApellido(usuario.getApellido());
+        }
+
+        if(usuario.getEmail() != null && usuario.getEmail() != "") {
+            userExistente.setEmail(usuario.getEmail());
+        }
+
+        if(usuario.getCelular() != null && usuario.getCelular() != "") {
+            userExistente.setCelular(usuario.getCelular());
+        }
+
+        if(usuario.getRol() != null && !usuario.getRol().equals(userExistente.getRol())) {
+            userExistente.setRol(usuario.getRol());
+        }
+
+        if(usuario.isHabilitado() != userExistente.isHabilitado()) {
+            userExistente.setHabilitado(usuario.isHabilitado());
+        }
+
+        if(usuario.getCuentas() != null && !usuario.getCuentas().equals(userExistente.getCuentas())) {
+            userExistente.setCuentas(usuario.getCuentas());
+        }
+
+        Usuario actualizado = usuarioRepository.save(userExistente);
+        return new UsuarioDTO(actualizado);
+    }
 }
