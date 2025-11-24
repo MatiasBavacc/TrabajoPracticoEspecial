@@ -5,25 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="723662e4-479d-4db5-9852-0ec9a71ebf68" name="Changes" comment="Usuarios MicroServicio">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/viajes/src/main/java/grupo30/viajes/config/DataInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/viajes/src/main/java/grupo30/viajes/controllers/ViajeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/viajes/src/main/java/grupo30/viajes/dto/NuevoViajeDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/viajes/src/main/java/grupo30/viajes/dto/ViajeDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/viajes/src/main/java/grupo30/viajes/entity/DetalleViaje.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/viajes/src/main/java/grupo30/viajes/entity/Estado_viaje.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/viajes/src/main/java/grupo30/viajes/entity/Viaje.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/viajes/src/main/java/grupo30/viajes/repository/ViajeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/viajes/src/main/java/grupo30/viajes/service/ViajeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/viajes/src/main/resources/import.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/viajes/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/viajes/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/viajes/src/main/java/grupo4/viajes/ViajesApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/viajes/src/main/java/grupo30/viajes/ViajesApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/viajes/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/viajes/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/viajes/src/test/java/grupo4/viajes/ViajesApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/viajes/src/test/java/grupo30/viajes/ViajesApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/grupo4/gateway/GatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/grupo30/gateway/GatewayApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/test/java/grupo4/gateway/GatewayApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/test/java/grupo30/gateway/GatewayApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,6 +155,17 @@
         <option value="SpringBootApplicationConfigurationType" />
       </set>
     </option>
+    <option name="configurationStatuses">
+      <map>
+        <entry key="SpringBootApplicationConfigurationType">
+          <value>
+            <map>
+              <entry key="GatewayApplication" value="STOPPED" />
+            </map>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="RunManager" selected="Spring Boot.ViajesApplication (1)">
     <configuration name="AdminApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
@@ -191,7 +191,7 @@
     </configuration>
     <configuration name="GatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="gateway" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="grupo4.gateway.GatewayApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="grupo30.gateway.GatewayApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -246,8 +246,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.26775.15" />
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.26775.15" />
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.28238.7" />
+        <option value="bundled-js-predefined-d6986cc7102b-a71380e98a7c-JavaScript-IU-252.28238.7" />
       </set>
     </attachedChunks>
   </component>
@@ -280,6 +280,7 @@
       <workItem from="1763860402897" duration="1816000" />
       <workItem from="1763926278752" duration="7789000" />
       <workItem from="1763934802467" duration="10769000" />
+      <workItem from="1763985808737" duration="1579000" />
     </task>
     <task id="LOCAL-00001" summary="Compose agregado con las 3 bases y un get y post en mongo en msvc-monpatin">
       <option name="closed" value="true" />
@@ -358,5 +359,13 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
   </component>
 </project>
