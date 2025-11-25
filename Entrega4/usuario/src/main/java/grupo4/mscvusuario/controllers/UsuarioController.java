@@ -63,4 +63,21 @@ public class UsuarioController {
         UsuarioDTO actualizado = usuarioService.update(u);
         return ResponseEntity.ok(actualizado);
     }
+
+    // Nuevo endpoint para autenticación: busca por nombre de usuario (campo 'usuario')
+    @GetMapping("/username")
+    public ResponseEntity<UserAuthResponse> findByUsername(@RequestParam String username) {
+        Usuario usuario = usuarioService.findEntityByUsuario(username);
+        if (usuario == null) {
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.ok(new UserAuthResponse(usuario));
+    }
+
+    // DTO interno para Feign del gateway
+    public record UserAuthResponse(Long id, String username, String password, String rol) {
+        public UserAuthResponse(Usuario u) {
+            this(u.getId(), u.getUsuario(), u.getPassword(), u.getRol().name());
+        }
+    }
 }

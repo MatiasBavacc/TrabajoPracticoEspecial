@@ -4,9 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="723662e4-479d-4db5-9852-0ec9a71ebf68" name="Changes" comment="viajes">
       <change beforePath="$PROJECT_DIR$/gateway/src/main/java/grupo4/gateway/GatewayApplication.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application.properties" beforeDir="false" />
+=======
+    <list default="true" id="723662e4-479d-4db5-9852-0ec9a71ebf68" name="Changes" comment="Usuarios MicroServicio">
+      <change afterPath="$PROJECT_DIR$/cuenta/src/main/java/grupo30/mscvmercadopago/controller/MercadoPagoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuenta/src/main/java/grupo30/mscvmercadopago/dto/MercadoCuentaDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuenta/src/main/java/grupo30/mscvmercadopago/entity/MercadoCuenta.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuenta/src/main/java/grupo30/mscvmercadopago/repository/MercadoPagoRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuenta/src/main/java/grupo30/mscvmercadopago/service/MercadoPagoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuenta/src/main/resources/import.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuenta/src/main/java/grupo4/mscvcuenta/CuentaApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/cuenta/src/main/java/grupo30/mscvmercadopago/MercadoPagoApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuenta/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/cuenta/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuenta/src/test/java/grupo4/mscvcuenta/MscvCuentaApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/cuenta/src/test/java/grupo30/mscvmercadopago/MscvMercadoPagoApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/grupo30/gateway/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/grupo30/gateway/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/grupo30/gateway/feignClients/UsuarioFeign.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/grupo30/gateway/feignClients/UsuarioFeign.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" afterDir="false" />
+>>>>>>> a62f7f2d532155572a7fb6f27a62cfa70d98419c
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,10 +46,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Record" />
         <option value="Enum" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -74,6 +92,7 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< HEAD
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Maven.viaje [clean].executor&quot;: &quot;Run&quot;,
@@ -122,23 +141,73 @@
     &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+=======
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven.viaje [clean].executor": "Run",
+    "Maven.viaje [compile].executor": "Run",
+    "Maven.viaje [validate].executor": "Run",
+    "Maven.viaje [verify].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.AdminApplication.executor": "Run",
+    "Spring Boot.CuentaApplication.executor": "Run",
+    "Spring Boot.FacturacionApplication.executor": "Run",
+    "Spring Boot.GatewayApplication.executor": "Run",
+    "Spring Boot.MercadoPagoApplication.executor": "Run",
+    "Spring Boot.MonopatinApplication.executor": "Run",
+    "Spring Boot.MscvAdminApplication.executor": "Run",
+    "Spring Boot.MscvCuentaApplication.executor": "Run",
+    "Spring Boot.MscvMonopatinApplication.executor": "Run",
+    "Spring Boot.MscvUsuarioApplication.executor": "Run",
+    "Spring Boot.MscvViajeApplication.executor": "Run",
+    "Spring Boot.ParadaApplication.executor": "Run",
+    "Spring Boot.ParadasApplication.executor": "Run",
+    "Spring Boot.TarifasApplication.executor": "Run",
+    "Spring Boot.UsuarioApplication.executor": "Run",
+    "Spring Boot.ViajesApplication (1).executor": "Run",
+    "Spring Boot.ViajesApplication.executor": "Run",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Casa/Desktop/TrabajoPracticoEspecial2/Entrega4/gateway/src/main/java/grupo30/gateway",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "D:/USUARIO/Desktop/TUDAI/Arquitecturas Web/TpArquitectura/Integrador4/src/main/java/grupo4/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+>>>>>>> a62f7f2d532155572a7fb6f27a62cfa70d98419c
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="grupo4.mscvusuario.entity" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Casa\Desktop\TrabajoPracticoEspecial2\Entrega4\gateway\src\main\java\grupo30\gateway" />
       <recent name="C:\Users\valen\OneDrive\Escritorio\New folder\TrabajoPracticoEspecial\Entrega4\viajes\src\main\java\grupo30\viajes" />
       <recent name="C:\Users\Casa\Desktop\TrabajoPracticoEspecial\Entrega4\paradas\src\main\resources" />
       <recent name="C:\Users\Casa\Desktop\TrabajoPracticoEspecial\Entrega4\parada\src\main\java\grupo4\parada" />
       <recent name="D:\USUARIO\Desktop\TUDAI\Arquitecturas Web\TpArquitectura\Integrador4\facturacion\src\main\java\grupo4\facturacion" />
-      <recent name="D:\USUARIO\Desktop\TUDAI\Arquitecturas Web\TpArquitectura\Integrador4\tarifas\src\main\java\grupo4\tarifas" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="grupo30.viajes.controllers" />
@@ -153,18 +222,27 @@
         <option value="SpringBootApplicationConfigurationType" />
       </set>
     </option>
+    <option name="configurationStatuses">
+      <map>
+        <entry key="SpringBootApplicationConfigurationType">
+          <value>
+            <map>
+              <entry key="GatewayApplication" value="STOPPED" />
+              <entry key="MercadoPagoApplication" value="STOPPED" />
+              <entry key="ParadasApplication" value="STOPPED" />
+              <entry key="TarifasApplication" value="STOPPED" />
+              <entry key="UsuarioApplication" value="STOPPED" />
+              <entry key="ViajesApplication (1)" value="STOPPED" />
+            </map>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ViajesApplication (1)">
+  <component name="RunManager" selected="Spring Boot.MercadoPagoApplication">
     <configuration name="AdminApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="admin" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="grupo4.mscvadmin.AdminApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CuentaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="cuenta" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="grupo4.mscvcuenta.CuentaApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -178,7 +256,14 @@
     </configuration>
     <configuration name="GatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="gateway" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="grupo4.gateway.GatewayApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="grupo30.gateway.GatewayApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MercadoPagoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="cuenta" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="grupo30.mscvmercadopago.MercadoPagoApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -221,7 +306,7 @@
     <list>
       <item itemvalue="Spring Boot.ViajesApplication (1)" />
       <item itemvalue="Spring Boot.AdminApplication" />
-      <item itemvalue="Spring Boot.CuentaApplication" />
+      <item itemvalue="Spring Boot.MercadoPagoApplication" />
       <item itemvalue="Spring Boot.FacturacionApplication" />
       <item itemvalue="Spring Boot.GatewayApplication" />
       <item itemvalue="Spring Boot.MonopatinApplication" />
@@ -233,8 +318,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.26775.15" />
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.26775.15" />
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.28238.7" />
+        <option value="bundled-js-predefined-d6986cc7102b-a71380e98a7c-JavaScript-IU-252.28238.7" />
       </set>
     </attachedChunks>
   </component>
@@ -267,8 +352,13 @@
       <workItem from="1763860402897" duration="1816000" />
       <workItem from="1763926278752" duration="7789000" />
       <workItem from="1763934802467" duration="10769000" />
+<<<<<<< HEAD
       <workItem from="1763953011523" duration="13427000" />
       <workItem from="1764009376425" duration="14694000" />
+=======
+      <workItem from="1763985808737" duration="6891000" />
+      <workItem from="1763992878403" duration="20952000" />
+>>>>>>> a62f7f2d532155572a7fb6f27a62cfa70d98419c
     </task>
     <task id="LOCAL-00001" summary="Compose agregado con las 3 bases y un get y post en mongo en msvc-monpatin">
       <option name="closed" value="true" />
@@ -375,5 +465,13 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
   </component>
 </project>

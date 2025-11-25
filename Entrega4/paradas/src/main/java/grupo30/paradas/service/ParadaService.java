@@ -29,16 +29,22 @@ public class ParadaService {
     @Transactional
     public ParadaDTO findParadaById(Long id) {
         Parada parada = paradaRepository.findById(id).orElse(null);
+
         if (parada == null) {
             return null;
         }
-        return new ParadaDTO(parada.getId(), parada.getNombre(), parada.getLatitud(), parada.getLongitud(),
-                parada.getQr(), parada.getDisponibles());
+        return new ParadaDTO(parada);
     }
 
     /* endpoint eliminar ok  */
     @Transactional
     public void eliminarParada(Long id) {
+        Parada parada = paradaRepository.findById(id).orElse(null);
+        if (parada == null) return;
+
+        parada.getDisponibles().clear();
+        paradaRepository.save(parada); // Limpia parada_disponibles
+
         paradaRepository.deleteById(id);
     }
 
@@ -81,11 +87,12 @@ public class ParadaService {
 
         // 1️⃣ Buscar la parada
         Parada parada = paradaRepository.findById(paradaId).orElse(null);
-        if(parada.getDisponibles().contains(monopatinId)){
-            return null;
-        }
         if (parada == null) {
             return null; // Se maneja en el controller como 404
+        }
+
+        if(parada.getDisponibles().contains(monopatinId)){
+            return null;
         }
 
         // 2️⃣ Inicializar la lista si está null (seguridad)
