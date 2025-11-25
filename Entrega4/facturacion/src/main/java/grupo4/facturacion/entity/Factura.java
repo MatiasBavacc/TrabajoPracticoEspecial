@@ -1,13 +1,10 @@
 package grupo4.facturacion.entity;
 
-import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
 
+import java.time.LocalDate;
 import java.util.Date;
 
 @EnableFeignClients
@@ -15,22 +12,23 @@ import java.util.Date;
 
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
-@Table (name = "factura")
+@Getter
+@Setter
+
+
 public class Factura {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name = "numero_factura", nullable = false, unique = true)
-    private String numeroFactura;
-    private String usuario; //
-    @Column(name = "fecha_emision")
+
+    private Usuario usuario;
+    private Cuenta cuenta;
+    private Viaje viaje;
+    private LocalDate fecha;
+    private boolean paga;
+    private Double Total;
     private Date fechaEmision;
     private double monto;
     private String estado; // Pagada o Pendiente de pago
 
-    @Column(name = "usuario_id")
-    private Long usuarioId;
 
     public Factura(String numeroFactura, String usuario, Date fechaEmision,
                    double monto, String estado, Long usuarioId) {

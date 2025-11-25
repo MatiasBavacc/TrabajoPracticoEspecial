@@ -1,9 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="dataSourceStorageLocal" created-in="IU-252.28238.7">
+  <component name="dataSourceStorageLocal" created-in="IU-242.26775.15">
     <data-source name="paradas@localhost" uuid="970a2b9b-b1c6-4b11-8a39-64e282b62cef">
       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MYSQL" />
       <secret-storage>master_key</secret-storage>
+      <schema-mapping />
+    </data-source>
+    <data-source name="mercado_pago@localhost" uuid="f1c98c2c-19d4-43c5-85c3-b8d0f39dfe75">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MYSQL" />
+      <user-name>root</user-name>
+      <schema-mapping />
+    </data-source>
+    <data-source name="usuarios@localhost" uuid="47c80b13-f8a0-4c05-8480-cbc0d4bb4c05">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MYSQL" />
+      <user-name>root</user-name>
+      <schema-mapping />
+    </data-source>
+    <data-source name="facturas@localhost" uuid="9e0bc3f7-8604-489f-b12b-f68322dbd7c6">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <user-name>postgres</user-name>
+      <schema-mapping />
+    </data-source>
+    <data-source name="tarifas@localhost" uuid="f9b8820a-f9e6-4758-afcd-a302233b97ef">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MYSQL" />
+      <user-name>root</user-name>
+      <schema-mapping />
+    </data-source>
+    <data-source name="db_mongo@localhost" uuid="e970450d-3c1f-436d-a975-7eb8eea2b865">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MONGO" />
+      <user-name>root</user-name>
+      <schema-mapping />
+    </data-source>
+    <data-source name="monopatines@localhost" uuid="62cbae25-c242-4135-bb15-a80703ea873f">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MYSQL" />
+      <user-name>root</user-name>
+      <schema-mapping />
+    </data-source>
+    <data-source name="auth@localhost" uuid="eddc9ed4-e396-439b-86cf-14a85512040c">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MYSQL" />
+      <user-name>root</user-name>
       <schema-mapping />
     </data-source>
   </component>
