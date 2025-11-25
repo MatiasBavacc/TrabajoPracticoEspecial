@@ -1,13 +1,13 @@
-package grupo4.mscvcuenta;
+package grupo30.mscvmercadopago;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CuentaApplication {
+public class MercadoPagoApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(CuentaApplication.class, args);
+        SpringApplication.run(MercadoPagoApplication.class, args);
     }
 
 }

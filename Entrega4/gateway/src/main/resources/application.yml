@@ -54,6 +54,12 @@ spring:
               predicates:
                 - Path=/usuario/**
 
+            # Mook de MercadoPago (puerto 8082)
+            - id: mercadopago
+              uri: http://localhost:8082
+              predicates:
+                - Path=/mercadopago/**
+
 security:
   jwt:
     secret: j7ZookpUTYxclaULynjypGQVKMYXqOXMI+/1sQ2gOV1BF6VOHw6OzYj9RNZY4GcHAE3Igrah3MZ26oLrY/3y4Q==

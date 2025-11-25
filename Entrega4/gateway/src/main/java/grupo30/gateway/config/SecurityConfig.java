@@ -44,23 +44,26 @@ public class SecurityConfig {
                     .requestMatchers(HttpMethod.POST, "/token").permitAll()
                     .requestMatchers(HttpMethod.POST, "/registrar").permitAll()
                     // MS-PARADAS
-                    .requestMatchers(HttpMethod.GET, "/paradas/**").hasAnyAuthority( AuthotityConstant._USUARIO, AuthotityConstant._ADMIN )
-                    .requestMatchers("/paradas/**").hasAuthority( AuthotityConstant._ADMIN )
+                    .requestMatchers(HttpMethod.GET, "/parada/**").hasAnyAuthority( AuthotityConstant._USUARIO, AuthotityConstant._ADMIN )
+                    .requestMatchers("/parada/**").hasAuthority( AuthotityConstant._ADMIN )
                     // MS-USUARIO Y CUENTA
-                    .requestMatchers("/usuario").hasAuthority( AuthotityConstant._ADMIN)
+                    .requestMatchers("/usuario/").hasAuthority( AuthotityConstant._ADMIN)
                     .requestMatchers(HttpMethod.PUT, "/usuario/modificar").hasAuthority( AuthotityConstant._ADMIN)
                     .requestMatchers(HttpMethod.DELETE, "/usuario/agregar").hasAnyAuthority( AuthotityConstant._ADMIN)
                     .requestMatchers("/cuenta/**").hasAuthority( AuthotityConstant._ADMIN)
+                    // MOOK-MERCADO PAGO
+                    .requestMatchers("/mercadopago", "/mercadopago/").permitAll()
+                    .requestMatchers("/mercadopago/**").permitAll() // si querés que subrutas también sean públicas
                     // MS-MONOPATINES
-                    .requestMatchers("/monopatines/reportes-mantenimiento/{kmMaximo}").hasAuthority( AuthotityConstant._ADMIN)
-                    .requestMatchers(HttpMethod.GET, "/api/monopatines/**").hasAnyAuthority( AuthotityConstant._USUARIO, AuthotityConstant._ADMIN)
-                    .requestMatchers("/monopatines/**").hasAuthority( AuthotityConstant._ADMIN )
+                    .requestMatchers("/monopatin/").hasAuthority( AuthotityConstant._ADMIN)
+                    .requestMatchers(HttpMethod.GET, "/monopatin/").hasAnyAuthority( AuthotityConstant._USUARIO, AuthotityConstant._ADMIN)
+                    .requestMatchers("/monopatin/**").hasAuthority( AuthotityConstant._ADMIN )
                     // MS-FACTURAS Y TARIFA SOLO ADMINS
                     .requestMatchers("/facturas/**").hasAuthority( AuthotityConstant._ADMIN )
-                    .requestMatchers("/tarifas/**").hasAuthority( AuthotityConstant._ADMIN )
+                    .requestMatchers("/tarifa/**").hasAuthority( AuthotityConstant._ADMIN )
                     // MS-VIAJES
-                    .requestMatchers("/viajes/reportes").hasAuthority( AuthotityConstant._ADMIN )
-                    .requestMatchers("/viajes/**").hasAnyAuthority( AuthotityConstant._USUARIO, AuthotityConstant._ADMIN )
+                    .requestMatchers("/viaje/reportes").hasAuthority( AuthotityConstant._ADMIN )
+                    .requestMatchers("/viaje/**").hasAnyAuthority( AuthotityConstant._USUARIO, AuthotityConstant._ADMIN )
                     .anyRequest().authenticated()
             )
             .addFilterBefore( new JwtFilter( this.tokenProvider ), UsernamePasswordAuthenticationFilter.class );

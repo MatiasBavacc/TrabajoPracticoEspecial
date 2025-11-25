@@ -14,6 +14,6 @@ public interface UsuarioFeign {
     @GetMapping("/username")
     UserResponse findUserByUsername(@RequestParam String username);
 
-    @PostMapping
+    @PostMapping("/agregar")
     UserResponse createUser(UserDTO user);
 }
