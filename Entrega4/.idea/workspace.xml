@@ -4,27 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="723662e4-479d-4db5-9852-0ec9a71ebf68" name="Changes" comment="viajes">
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/grupo4/gateway/GatewayApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application.properties" beforeDir="false" />
-=======
     <list default="true" id="723662e4-479d-4db5-9852-0ec9a71ebf68" name="Changes" comment="Usuarios MicroServicio">
-      <change afterPath="$PROJECT_DIR$/cuenta/src/main/java/grupo30/mscvmercadopago/controller/MercadoPagoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cuenta/src/main/java/grupo30/mscvmercadopago/dto/MercadoCuentaDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cuenta/src/main/java/grupo30/mscvmercadopago/entity/MercadoCuenta.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cuenta/src/main/java/grupo30/mscvmercadopago/repository/MercadoPagoRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cuenta/src/main/java/grupo30/mscvmercadopago/service/MercadoPagoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cuenta/src/main/resources/import.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cuenta/src/main/java/grupo4/mscvcuenta/CuentaApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/cuenta/src/main/java/grupo30/mscvmercadopago/MercadoPagoApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cuenta/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/cuenta/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cuenta/src/test/java/grupo4/mscvcuenta/MscvCuentaApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/cuenta/src/test/java/grupo30/mscvmercadopago/MscvMercadoPagoApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/grupo30/gateway/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/grupo30/gateway/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/grupo30/gateway/feignClients/UsuarioFeign.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/grupo30/gateway/feignClients/UsuarioFeign.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" afterDir="false" />
->>>>>>> a62f7f2d532155572a7fb6f27a62cfa70d98419c
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,9 +59,6 @@
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
 }</component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
-  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -92,7 +70,6 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-<<<<<<< HEAD
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Maven.viaje [clean].executor&quot;: &quot;Run&quot;,
@@ -112,6 +89,7 @@
     &quot;Spring Boot.CuentaApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.FacturacionApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.GatewayApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.MercadoPagoApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.MonopatinApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.MscvAdminApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.MscvCuentaApplication.executor&quot;: &quot;Run&quot;,
@@ -127,7 +105,7 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/valen/OneDrive/Escritorio/New folder/TrabajoPracticoEspecial/Entrega4/viajes/src/main/java/grupo30/viajes&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Casa/Desktop/TrabajoPracticoEspecial2/Entrega4/gateway/src/main/java/grupo30/gateway&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -137,67 +115,16 @@
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
     &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-=======
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Maven.viaje [clean].executor": "Run",
-    "Maven.viaje [compile].executor": "Run",
-    "Maven.viaje [validate].executor": "Run",
-    "Maven.viaje [verify].executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.AdminApplication.executor": "Run",
-    "Spring Boot.CuentaApplication.executor": "Run",
-    "Spring Boot.FacturacionApplication.executor": "Run",
-    "Spring Boot.GatewayApplication.executor": "Run",
-    "Spring Boot.MercadoPagoApplication.executor": "Run",
-    "Spring Boot.MonopatinApplication.executor": "Run",
-    "Spring Boot.MscvAdminApplication.executor": "Run",
-    "Spring Boot.MscvCuentaApplication.executor": "Run",
-    "Spring Boot.MscvMonopatinApplication.executor": "Run",
-    "Spring Boot.MscvUsuarioApplication.executor": "Run",
-    "Spring Boot.MscvViajeApplication.executor": "Run",
-    "Spring Boot.ParadaApplication.executor": "Run",
-    "Spring Boot.ParadasApplication.executor": "Run",
-    "Spring Boot.TarifasApplication.executor": "Run",
-    "Spring Boot.UsuarioApplication.executor": "Run",
-    "Spring Boot.ViajesApplication (1).executor": "Run",
-    "Spring Boot.ViajesApplication.executor": "Run",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Casa/Desktop/TrabajoPracticoEspecial2/Entrega4/gateway/src/main/java/grupo30/gateway",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "D:/USUARIO/Desktop/TUDAI/Arquitecturas Web/TpArquitectura/Integrador4/src/main/java/grupo4/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
->>>>>>> a62f7f2d532155572a7fb6f27a62cfa70d98419c
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="grupo4.mscvusuario.entity" />
@@ -229,6 +156,7 @@
             <map>
               <entry key="GatewayApplication" value="STOPPED" />
               <entry key="MercadoPagoApplication" value="STOPPED" />
+              <entry key="MonopatinApplication" value="STOPPED" />
               <entry key="ParadasApplication" value="STOPPED" />
               <entry key="TarifasApplication" value="STOPPED" />
               <entry key="UsuarioApplication" value="STOPPED" />
@@ -352,13 +280,8 @@
       <workItem from="1763860402897" duration="1816000" />
       <workItem from="1763926278752" duration="7789000" />
       <workItem from="1763934802467" duration="10769000" />
-<<<<<<< HEAD
-      <workItem from="1763953011523" duration="13427000" />
-      <workItem from="1764009376425" duration="14694000" />
-=======
       <workItem from="1763985808737" duration="6891000" />
-      <workItem from="1763992878403" duration="20952000" />
->>>>>>> a62f7f2d532155572a7fb6f27a62cfa70d98419c
+      <workItem from="1763992878403" duration="21601000" />
     </task>
     <task id="LOCAL-00001" summary="Compose agregado con las 3 bases y un get y post en mongo en msvc-monpatin">
       <option name="closed" value="true" />
@@ -392,33 +315,15 @@
       <option name="project" value="LOCAL" />
       <updated>1763861045217</updated>
     </task>
-    <task id="LOCAL-00005" summary="viajes">
-      <option name="closed" value="true" />
-      <created>1763949944321</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1763949944321</updated>
-    </task>
-    <option name="localTasksCounter" value="6" />
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
-    <option name="OPEN_GENERIC_TABS">
-      <map>
-        <entry key="7bd10f41-de70-484a-be4d-5cdeadb9bacd" value="TOOL_WINDOW" />
-      </map>
-    </option>
     <option name="TAB_STATES">
       <map>
-        <entry key="7bd10f41-de70-484a-be4d-5cdeadb9bacd">
-          <value>
-            <State />
-          </value>
-        </entry>
         <entry key="MAIN">
           <value>
             <State>
@@ -443,9 +348,7 @@
     <MESSAGE value="Compose agregado con las 3 bases y un get y post en mongo en msvc-monpatin" />
     <MESSAGE value="Implementado los microservicios de dani y el crud del microservicio de monopatines" />
     <MESSAGE value="Usuarios MicroServicio" />
-    <MESSAGE value="Viajes" />
-    <MESSAGE value="viajes" />
-    <option name="LAST_COMMIT_MESSAGE" value="viajes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Usuarios MicroServicio" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -454,14 +357,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/grupo4/Main.java</url>
           <line>13</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/paradas/src/main/java/grupo30/paradas/service/ParadaService.java</url>
-          <line>48</line>
-          <properties>
-            <option name="lambda-ordinal" value="0" />
-          </properties>
-          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
