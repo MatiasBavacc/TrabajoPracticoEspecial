@@ -1,10 +1,14 @@
 package grupo30.viajes.entity;
 
 import grupo30.viajes.dto.NuevoViajeDTO;
+import org.springframework.cglib.core.Local;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import javax.xml.datatype.Duration;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -74,10 +78,10 @@ public class Viaje {
 
     public Viaje(NuevoViajeDTO dto) {
         this.usuario_id = dto.getUsuario_id();
-        this.cuenta_id = dto.getUsuario_id();
-        this.monopatin_id = dto.getUsuario_id();
-        this.parada_inicio_id = dto.getUsuario_id();
-        this.parada_fin_id = dto.getUsuario_id();
+        this.cuenta_id = dto.getCuenta_id();
+        this.monopatin_id = dto.getMonopatin_id();
+        this.parada_inicio_id = dto.getParada_inicio_id();
+        this.parada_fin_id = null;
         this.km_total_viaje = 0.0;
         this.horas_total_viaje = 0.0;
         this.horas_total_pausa = 0.0;
@@ -179,5 +183,39 @@ public class Viaje {
                 ", horas_total_viaje=" + horas_total_viaje +
                 ", horas_total_pausa=" + horas_total_pausa +
                 '}';
+    }
+
+    public void addDetalle(DetalleViaje nuevo){
+        DetalleViaje ultimo = this.getDetalles().getLast();
+        if(!detalles.contains(nuevo) && ultimo.getFechaHora().isBefore(nuevo.getFechaHora())){
+            switch (nuevo.getEstado()){
+                case VIAJE:
+                    //si el estado cambia a VIAJE termina una PAUSA
+                    this.horas_total_pausa +=  this.sacarDiferenciaHoraria(ultimo.getFechaHora(),nuevo.getFechaHora());
+                    break;
+                case PAUSA:
+                    //si el estado cambia a PAUSA estaba viajando
+                    this.km_total_viaje += this.sacarDiferenciaKl(nuevo.getKilometros(), ultimo.getKilometros());
+                    this.horas_total_viaje += this.sacarDiferenciaHoraria(ultimo.getFechaHora(),nuevo.getFechaHora());
+                    break;
+                case FINALIZADO:
+                    //si finaliza el viaje, estaba VIAJANDO
+                    this.km_total_viaje += this.sacarDiferenciaKl(nuevo.getKilometros(), ultimo.getKilometros());
+                    this.horas_total_viaje += this.sacarDiferenciaHoraria(ultimo.getFechaHora(),nuevo.getFechaHora());
+                    break;
+            }
+            this.detalles.add(nuevo);
+        }
+
+    }
+
+    private Double sacarDiferenciaHoraria(LocalDateTime fechamenor, LocalDateTime fechamayor) {
+        long minutos = ChronoUnit.MINUTES.between(fechamenor, fechamayor);
+        return (double) minutos / 60;
+    }
+
+
+    private Double sacarDiferenciaKl(Double a, double b){
+        return (a - b);
     }
 }

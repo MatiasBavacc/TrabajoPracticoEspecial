@@ -30,7 +30,6 @@
         "estado": "FINALIZADO"
       }
     ]
-
   },
   {
     "usuario_id": 2,
@@ -60,6 +59,102 @@
       {
         "fechaHora": "2025-11-23T20:50:00",
         "kilometros": 120.0,
+        "estado": "FINALIZADO"
+      }
+    ]
+  },
+  {
+    "usuario_id": 2,
+    "cuenta_id": 5,
+    "monopatin_id": 7,
+    "parada_inicio_id": 12,
+    "parada_fin_id": 15,
+    "km_total_viaje": 40.00,
+    "horas_total_viaje": 1.50,
+    "horas_total_pausa": 1.10,
+    "detalles": [
+      {
+        "fechaHora": "2025-11-23T19:00:00",
+        "kilometros": 80.0,
+        "estado": "VIAJE"
+      },
+      {
+        "fechaHora": "2025-11-23T19:30:00",
+        "kilometros": 89.0,
+        "estado": "PAUSA"
+      },
+      {
+        "fechaHora": "2025-11-23T20:40:00",
+        "kilometros": 89.0,
+        "estado": "VIAJE"
+      },
+      {
+        "fechaHora": "2025-11-23T20:50:00",
+        "kilometros": 120.0,
+        "estado": "FINALIZADO"
+      }
+    ]
+  },
+  {
+    "usuario_id": 1,
+    "cuenta_id": 2,
+    "monopatin_id": 4,
+    "parada_inicio_id": 10,
+    "parada_fin_id": 11,
+    "km_total_viaje": 6.5,
+    "horas_total_viaje": 0.50,
+    "horas_total_pausa": 0.10,
+    "detalles": [
+      {
+        "fechaHora": "2025-11-23T18:00:00",
+        "kilometros": 2.5,
+        "estado": "VIAJE"
+      },
+      {
+        "fechaHora": "2025-11-23T18:30:00",
+        "kilometros": 5.0,
+        "estado": "PAUSA"
+      },
+      {
+        "fechaHora": "2025-11-23T18:40:00",
+        "kilometros": 5.0,
+        "estado": "VIAJE"
+      },
+      {
+        "fechaHora": "2025-11-23T18:50:00",
+        "kilometros": 9.0,
+        "estado": "FINALIZADO"
+      }
+    ]
+  },
+  {
+    "usuario_id": 1,
+    "cuenta_id": 2,
+    "monopatin_id": 4,
+    "parada_inicio_id": 10,
+    "parada_fin_id": 11,
+    "km_total_viaje": 6.5,
+    "horas_total_viaje": 0.50,
+    "horas_total_pausa": 0.10,
+    "detalles": [
+      {
+        "fechaHora": "2025-11-23T18:00:00",
+        "kilometros": 2.5,
+        "estado": "VIAJE"
+      },
+      {
+        "fechaHora": "2025-11-23T18:30:00",
+        "kilometros": 5.0,
+        "estado": "PAUSA"
+      },
+      {
+        "fechaHora": "2025-11-23T18:40:00",
+        "kilometros": 5.0,
+        "estado": "VIAJE"
+      },
+      {
+        "fechaHora": "2025-11-23T18:50:00",
+        "kilometros": 9.0,
         "estado": "FINALIZADO"
       }
     ]

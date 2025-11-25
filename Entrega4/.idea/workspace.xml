@@ -4,26 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="723662e4-479d-4db5-9852-0ec9a71ebf68" name="Changes" comment="Usuarios MicroServicio">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/viajes/src/main/java/grupo30/viajes/config/DataInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/viajes/src/main/java/grupo30/viajes/controllers/ViajeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/viajes/src/main/java/grupo30/viajes/dto/NuevoViajeDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/viajes/src/main/java/grupo30/viajes/dto/ViajeDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/viajes/src/main/java/grupo30/viajes/entity/DetalleViaje.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/viajes/src/main/java/grupo30/viajes/entity/Estado_viaje.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/viajes/src/main/java/grupo30/viajes/entity/Viaje.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/viajes/src/main/java/grupo30/viajes/repository/ViajeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/viajes/src/main/java/grupo30/viajes/service/ViajeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/viajes/src/main/resources/import.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+    <list default="true" id="723662e4-479d-4db5-9852-0ec9a71ebf68" name="Changes" comment="viajes">
+      <change afterPath="$PROJECT_DIR$/viajes/src/main/java/grupo30/viajes/dto/CuentaViajesDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/viajes/src/main/java/grupo30/viajes/dto/MonopatinHorasDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/viajes/src/main/java/grupo30/viajes/dto/MonopatinViajesDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/viajes/src/main/java/grupo30/viajes/dto/NuevoDetalleDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/viajes/src/main/java/grupo30/viajes/dto/ReporteKlDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/viajes/src/main/java/grupo30/viajes/dto/UsuarioViajesDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/viajes/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/viajes/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/viajes/src/main/java/grupo4/viajes/ViajesApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/viajes/src/main/java/grupo30/viajes/ViajesApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/viajes/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/viajes/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/viajes/src/test/java/grupo4/viajes/ViajesApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/viajes/src/test/java/grupo30/viajes/ViajesApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/viajes/src/main/java/grupo30/viajes/controllers/ViajeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/viajes/src/main/java/grupo30/viajes/controllers/ViajeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/viajes/src/main/java/grupo30/viajes/dto/ViajeDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/viajes/src/main/java/grupo30/viajes/dto/ViajeDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/viajes/src/main/java/grupo30/viajes/entity/DetalleViaje.java" beforeDir="false" afterPath="$PROJECT_DIR$/viajes/src/main/java/grupo30/viajes/entity/DetalleViaje.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/viajes/src/main/java/grupo30/viajes/entity/Viaje.java" beforeDir="false" afterPath="$PROJECT_DIR$/viajes/src/main/java/grupo30/viajes/entity/Viaje.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/viajes/src/main/java/grupo30/viajes/repository/ViajeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/viajes/src/main/java/grupo30/viajes/repository/ViajeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/viajes/src/main/java/grupo30/viajes/service/ViajeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/viajes/src/main/java/grupo30/viajes/service/ViajeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/viajes/src/main/resources/import.json" beforeDir="false" afterPath="$PROJECT_DIR$/viajes/src/main/resources/import.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +73,9 @@
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -132,6 +131,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
     &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
@@ -280,6 +280,8 @@
       <workItem from="1763860402897" duration="1816000" />
       <workItem from="1763926278752" duration="7789000" />
       <workItem from="1763934802467" duration="10769000" />
+      <workItem from="1763953011523" duration="13427000" />
+      <workItem from="1764009376425" duration="14694000" />
     </task>
     <task id="LOCAL-00001" summary="Compose agregado con las 3 bases y un get y post en mongo en msvc-monpatin">
       <option name="closed" value="true" />
@@ -313,7 +315,15 @@
       <option name="project" value="LOCAL" />
       <updated>1763861045217</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="viajes">
+      <option name="closed" value="true" />
+      <created>1763949944321</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1763949944321</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -346,7 +356,9 @@
     <MESSAGE value="Compose agregado con las 3 bases y un get y post en mongo en msvc-monpatin" />
     <MESSAGE value="Implementado los microservicios de dani y el crud del microservicio de monopatines" />
     <MESSAGE value="Usuarios MicroServicio" />
-    <option name="LAST_COMMIT_MESSAGE" value="Usuarios MicroServicio" />
+    <MESSAGE value="Viajes" />
+    <MESSAGE value="viajes" />
+    <option name="LAST_COMMIT_MESSAGE" value="viajes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -355,6 +367,14 @@
           <url>file://$PROJECT_DIR$/src/main/java/grupo4/Main.java</url>
           <line>13</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/paradas/src/main/java/grupo30/paradas/service/ParadaService.java</url>
+          <line>48</line>
+          <properties>
+            <option name="lambda-ordinal" value="0" />
+          </properties>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

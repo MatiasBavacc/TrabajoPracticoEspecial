@@ -1,6 +1,7 @@
 package grupo30.viajes.dto;
 
 import grupo30.viajes.entity.DetalleViaje;
+import grupo30.viajes.entity.Viaje;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -63,6 +64,20 @@ public class ViajeDTO {
         this.horas_total_pausa = horas_total_pausa;
         this.detalles = detalles;
     }
+
+    public ViajeDTO(Viaje v){
+        this.id = v.getId();
+        this.usuario_id = v.getUsuario_id();
+        this.cuenta_id = v.getCuenta_id();
+        this.monopatin_id = v.getMonopatin_id();
+        this.parada_inicio_id = v.getParada_inicio_id();
+        this.parada_fin_id = v.getParada_fin_id();
+        this.km_total_viaje = v.getKm_total_viaje();
+        this.horas_total_viaje = v.getHoras_total_viaje();
+        this.horas_total_pausa = v.getHoras_total_pausa();
+        this.detalles = v.getDetalles();
+    }
+
 
     @Override
     public String toString() {

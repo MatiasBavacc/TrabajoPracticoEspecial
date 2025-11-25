@@ -1,5 +1,7 @@
 package grupo30.viajes.entity;
 
+import grupo30.viajes.dto.NuevoDetalleDTO;
+
 import java.time.LocalDateTime;
 
 public class DetalleViaje {
@@ -14,6 +16,12 @@ public class DetalleViaje {
         this.fechaHora = fechaHora;
         this.kilometros = kilometros;
         this.estado = estado;
+    }
+
+    public DetalleViaje(NuevoDetalleDTO dto) {
+        this.fechaHora = LocalDateTime.now();
+        this.kilometros = dto.getKilometros();
+        this.estado = dto.getEstado();
     }
 
     public LocalDateTime getFechaHora() {
