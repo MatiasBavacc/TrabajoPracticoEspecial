@@ -5,21 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="723662e4-479d-4db5-9852-0ec9a71ebf68" name="Changes" comment="viajes">
-      <change afterPath="$PROJECT_DIR$/viajes/src/main/java/grupo30/viajes/dto/CuentaViajesDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/viajes/src/main/java/grupo30/viajes/dto/MonopatinHorasDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/viajes/src/main/java/grupo30/viajes/dto/MonopatinViajesDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/viajes/src/main/java/grupo30/viajes/dto/NuevoDetalleDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/viajes/src/main/java/grupo30/viajes/dto/ReporteKlDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/viajes/src/main/java/grupo30/viajes/dto/UsuarioViajesDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/viajes/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/viajes/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/viajes/src/main/java/grupo30/viajes/controllers/ViajeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/viajes/src/main/java/grupo30/viajes/controllers/ViajeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/viajes/src/main/java/grupo30/viajes/dto/ViajeDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/viajes/src/main/java/grupo30/viajes/dto/ViajeDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/viajes/src/main/java/grupo30/viajes/entity/DetalleViaje.java" beforeDir="false" afterPath="$PROJECT_DIR$/viajes/src/main/java/grupo30/viajes/entity/DetalleViaje.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/viajes/src/main/java/grupo30/viajes/entity/Viaje.java" beforeDir="false" afterPath="$PROJECT_DIR$/viajes/src/main/java/grupo30/viajes/entity/Viaje.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/viajes/src/main/java/grupo30/viajes/repository/ViajeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/viajes/src/main/java/grupo30/viajes/repository/ViajeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/viajes/src/main/java/grupo30/viajes/service/ViajeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/viajes/src/main/java/grupo30/viajes/service/ViajeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/viajes/src/main/resources/import.json" beforeDir="false" afterPath="$PROJECT_DIR$/viajes/src/main/resources/import.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/grupo4/gateway/GatewayApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application.properties" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -330,8 +317,18 @@
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="7bd10f41-de70-484a-be4d-5cdeadb9bacd" value="TOOL_WINDOW" />
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
+        <entry key="7bd10f41-de70-484a-be4d-5cdeadb9bacd">
+          <value>
+            <State />
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
             <State>
