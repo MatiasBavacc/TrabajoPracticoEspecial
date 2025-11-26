@@ -1,4 +1,4 @@
-package grupo4.facturacion.entity;
+package grupo30.facturacion.entity;
 
 public enum TipoDeCuenta {
     BASICA,

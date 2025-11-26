@@ -1,4 +1,4 @@
-package grupo4.facturacion.dto;
+package grupo30.facturacion.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

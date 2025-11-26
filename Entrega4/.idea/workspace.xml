@@ -5,24 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="723662e4-479d-4db5-9852-0ec9a71ebf68" name="Changes" comment="Usuarios MicroServicio">
-      <change afterPath="$PROJECT_DIR$/facturacion/src/main/java/grupo4/facturacion/entity/Cuenta.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/facturacion/src/main/java/grupo4/facturacion/entity/Rol.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/facturacion/src/main/java/grupo4/facturacion/entity/TipoDeCuenta.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/facturacion/src/main/java/grupo4/facturacion/entity/Usuario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/facturacion/src/main/java/grupo30/facturacion/client/UsuarioFeignClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/facturacion/src/main/java/grupo30/facturacion/entity/DetalleViaje.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/facturacion/src/main/java/grupo30/facturacion/entity/Estado_viaje.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/facturacion/src/main/java/grupo30/facturacion/entity/Viaje.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/admin/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cuenta/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cuenta/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/facturacion/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/facturacion/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/facturacion/src/main/java/grupo4/facturacion/entity/Factura.java" beforeDir="false" afterPath="$PROJECT_DIR$/facturacion/src/main/java/grupo4/facturacion/entity/Factura.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/monopatin/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/monopatin/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/paradas/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/paradas/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tarifas/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tarifas/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/facturacion/src/main/java/grupo4/facturacion/FacturacionApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/facturacion/src/main/java/grupo30/facturacion/FacturacionApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/facturacion/src/main/java/grupo4/facturacion/client/TarifaFeignClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/facturacion/src/main/java/grupo30/facturacion/client/TarifaFeignClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/facturacion/src/main/java/grupo4/facturacion/config/RestTemplateConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/facturacion/src/main/java/grupo30/facturacion/config/RestTemplateConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/facturacion/src/main/java/grupo4/facturacion/controller/FacturaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/facturacion/src/main/java/grupo30/facturacion/controller/FacturaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/facturacion/src/main/java/grupo4/facturacion/dto/FacturaDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/facturacion/src/main/java/grupo30/facturacion/dto/FacturaDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/facturacion/src/main/java/grupo4/facturacion/dto/TarifaDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/facturacion/src/main/java/grupo30/facturacion/dto/TarifaDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/facturacion/src/main/java/grupo4/facturacion/entity/Cuenta.java" beforeDir="false" afterPath="$PROJECT_DIR$/facturacion/src/main/java/grupo30/facturacion/entity/Cuenta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/facturacion/src/main/java/grupo4/facturacion/entity/Factura.java" beforeDir="false" afterPath="$PROJECT_DIR$/facturacion/src/main/java/grupo30/facturacion/entity/Factura.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/facturacion/src/main/java/grupo4/facturacion/entity/Rol.java" beforeDir="false" afterPath="$PROJECT_DIR$/facturacion/src/main/java/grupo30/facturacion/entity/Rol.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/facturacion/src/main/java/grupo4/facturacion/entity/TipoDeCuenta.java" beforeDir="false" afterPath="$PROJECT_DIR$/facturacion/src/main/java/grupo30/facturacion/entity/TipoDeCuenta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/facturacion/src/main/java/grupo4/facturacion/entity/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/facturacion/src/main/java/grupo30/facturacion/entity/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/facturacion/src/main/java/grupo4/facturacion/repository/FacturaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/facturacion/src/main/java/grupo30/facturacion/repository/FacturaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/facturacion/src/main/java/grupo4/facturacion/service/FacturaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/facturacion/src/main/java/grupo30/facturacion/service/FacturaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/facturacion/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/facturacion/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/facturacion/src/test/java/grupo4/facturacion/FacturacionApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/facturacion/src/test/java/grupo30/facturacion/FacturacionApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/usuario/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/usuario/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/viajes/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/viajes/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,12 +157,13 @@
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\TrabajoPracticoEspecial\Entrega4\facturacion\src\main\java\grupo4\facturacion\entity" />
+      <recent name="C:\TrabajoPracticoEspecial\Entrega4\usuario\src\main\java\grupo4\mscvusuario\entity" />
       <recent name="C:\Users\Casa\Desktop\TrabajoPracticoEspecial2\Entrega4\gateway\src\main\java\grupo30\gateway" />
       <recent name="C:\Users\valen\OneDrive\Escritorio\New folder\TrabajoPracticoEspecial\Entrega4\viajes\src\main\java\grupo30\viajes" />
       <recent name="C:\Users\Casa\Desktop\TrabajoPracticoEspecial\Entrega4\paradas\src\main\resources" />
-      <recent name="C:\Users\Casa\Desktop\TrabajoPracticoEspecial\Entrega4\parada\src\main\java\grupo4\parada" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="grupo30.facturacion.client" />
       <recent name="grupo4.facturacion.entity" />
       <recent name="grupo30.viajes.controllers" />
     </key>
@@ -172,7 +178,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.MercadoPagoApplication">
+  <component name="RunManager" selected="Spring Boot.FacturacionApplication">
     <configuration name="AdminApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="admin" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="grupo4.mscvadmin.AdminApplication" />
@@ -182,7 +188,7 @@
     </configuration>
     <configuration name="FacturacionApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="facturacion" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="grupo4.facturacion.FacturacionApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="grupo30.facturacion.FacturacionApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -290,7 +296,8 @@
       <workItem from="1764036854321" duration="1407000" />
       <workItem from="1764038284262" duration="406000" />
       <workItem from="1764045455018" duration="2512000" />
-      <workItem from="1764106737931" duration="3032000" />
+      <workItem from="1764106737931" duration="13150000" />
+      <workItem from="1764127040522" duration="4993000" />
     </task>
     <task id="LOCAL-00001" summary="Compose agregado con las 3 bases y un get y post en mongo en msvc-monpatin">
       <option name="closed" value="true" />

@@ -1,4 +1,4 @@
-package grupo4.facturacion.config;
+package grupo30.facturacion.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

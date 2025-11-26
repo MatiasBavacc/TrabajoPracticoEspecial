@@ -1,4 +1,4 @@
-package grupo4.facturacion;
+package grupo30.facturacion;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
