@@ -44,6 +44,14 @@ public class ParadaDTO {
         this.disponibles = p.getDisponibles();
     }
 
+    public ParadaDTO(String nombre, Double latitud, Double longitud, String qr) {
+        this.nombre = nombre;
+        this.latitud = latitud;
+        this.longitud = longitud;
+        this.qr = qr;
+    }
+
+
     @Override
     public String toString() {
         return "ParadaDTO [" +
