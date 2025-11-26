@@ -69,3 +69,24 @@ logging:
   level:
     '[org.springframework.cloud.gateway]': DEBUG
     '[org.springframework.web]': DEBUG
+
+springdoc:
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
+  api-docs:
+    groups:
+      usuarios:
+        url: http://localhost:8087/v3/api-docs
+      cuentas:
+        url: http://localhost:8087/v3/api-docs
+      viajes:
+        url: http://localhost:8088/v3/api-docs
+      tarifas:
+        url: http://localhost:8086/v3/api-docs
+      paradas:
+        url: http://localhost:8085/v3/api-docs
+      monopatines:
+        url: http://localhost:8084/v3/api-docs
+      mercadopago:
+        url: http://localhost:8082/v3/api-docs

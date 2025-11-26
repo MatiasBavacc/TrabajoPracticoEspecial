@@ -5,24 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="723662e4-479d-4db5-9852-0ec9a71ebf68" name="Changes" comment="Usuarios MicroServicio">
-      <change afterPath="$PROJECT_DIR$/facturacion/src/main/java/grupo4/facturacion/entity/Cuenta.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/facturacion/src/main/java/grupo4/facturacion/entity/Rol.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/facturacion/src/main/java/grupo4/facturacion/entity/TipoDeCuenta.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/facturacion/src/main/java/grupo4/facturacion/entity/Usuario.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/admin/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/test/java/grupo4/mscvadmin/MscvAdminApplicationTests.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cuenta/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cuenta/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuenta/src/test/java/grupo30/mscvmercadopago/MscvMercadoPagoApplicationTests.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/facturacion/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/facturacion/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/facturacion/src/main/java/grupo4/facturacion/entity/Factura.java" beforeDir="false" afterPath="$PROJECT_DIR$/facturacion/src/main/java/grupo4/facturacion/entity/Factura.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/facturacion/src/main/java/grupo4/facturacion/service/FacturaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/facturacion/src/main/java/grupo4/facturacion/service/FacturaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/facturacion/src/test/java/grupo4/facturacion/FacturacionApplicationTests.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/grupo30/gateway/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/grupo30/gateway/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/test/java/grupo30/gateway/GatewayApplicationTests.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/monopatin/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/monopatin/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monopatin/src/test/java/grupo30/mscvmonopatin/MscvMonopatinApplicationTests.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/paradas/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/paradas/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/paradas/src/main/java/grupo30/paradas/dto/ParadaDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/paradas/src/main/java/grupo30/paradas/dto/ParadaDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/paradas/src/test/java/grupo30/paradas/ParadasApplicationTests.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/tarifas/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tarifas/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tarifas/src/test/java/grupo30/tarifas/TarifasApplicationTests.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/usuario/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/usuario/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usuario/src/test/java/grupo4/mscvusuario/MscvUsuarioApplicationTests.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/viajes/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/viajes/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/viajes/src/test/java/grupo30/viajes/ViajesApplicationTests.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,8 +69,8 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/MatiasBavacc/TrabajoPracticoEspecial&quot;,
-    &quot;accountId&quot;: &quot;12c0319a-fdca-4587-b438-1771ea53f678&quot;
+    &quot;url&quot;: &quot;https://github.com/MatiasBavacc/TrabajoPracticoEspecial.git&quot;,
+    &quot;accountId&quot;: &quot;d916d09c-bedd-4efc-8f42-f66a19997f2c&quot;
   }
 }</component>
   <component name="HttpClientEndpointsTabState">
@@ -90,62 +97,62 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Maven.cuenta [org.apache.maven.plugins:maven-compiler-plugin:3.14.1:compile].executor": "Run",
-    "Maven.viaje [clean].executor": "Run",
-    "Maven.viaje [compile].executor": "Run",
-    "Maven.viaje [validate].executor": "Run",
-    "Maven.viaje [verify].executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.AdminApplication.executor": "Run",
-    "Spring Boot.CuentaApplication.executor": "Run",
-    "Spring Boot.FacturacionApplication.executor": "Run",
-    "Spring Boot.GatewayApplication.executor": "Run",
-    "Spring Boot.MercadoPagoApplication.executor": "Run",
-    "Spring Boot.MonopatinApplication.executor": "Run",
-    "Spring Boot.MscvAdminApplication.executor": "Run",
-    "Spring Boot.MscvCuentaApplication.executor": "Run",
-    "Spring Boot.MscvMonopatinApplication.executor": "Run",
-    "Spring Boot.MscvUsuarioApplication.executor": "Run",
-    "Spring Boot.MscvViajeApplication.executor": "Run",
-    "Spring Boot.ParadaApplication.executor": "Run",
-    "Spring Boot.ParadasApplication.executor": "Run",
-    "Spring Boot.TarifasApplication.executor": "Run",
-    "Spring Boot.UsuarioApplication.executor": "Run",
-    "Spring Boot.ViajesApplication (1).executor": "Run",
-    "Spring Boot.ViajesApplication.executor": "Run",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/TrabajoPracticoEspecial/Entrega4/facturacion/src/main/java/grupo4/facturacion/entity",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "D:/USUARIO/Desktop/TUDAI/Arquitecturas Web/TpArquitectura/Integrador4/src/main/java/grupo4/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Maven.cuenta [org.apache.maven.plugins:maven-compiler-plugin:3.14.1:compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.viaje [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.viaje [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.viaje [validate].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.viaje [verify].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.AdminApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.CuentaApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.FacturacionApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.GatewayApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.MercadoPagoApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.MonopatinApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.MscvAdminApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.MscvCuentaApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.MscvMonopatinApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.MscvUsuarioApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.MscvViajeApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ParadaApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ParadasApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.TarifasApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.UsuarioApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ViajesApplication (1).executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ViajesApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Favorites/Desktop/nuevoTP/TrabajoPracticoEspecial/Entrega4&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;D:/USUARIO/Desktop/TUDAI/Arquitecturas Web/TpArquitectura/Integrador4/src/main/java/grupo4/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="grupo4.mscvusuario.entity" />
@@ -251,8 +258,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.26775.15" />
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.26775.15" />
+        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.21565.193" />
+        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-IU-243.21565.193" />
       </set>
     </attachedChunks>
   </component>
@@ -291,6 +298,12 @@
       <workItem from="1764038284262" duration="406000" />
       <workItem from="1764045455018" duration="2512000" />
       <workItem from="1764106737931" duration="3032000" />
+      <workItem from="1764110817158" duration="4305000" />
+      <workItem from="1764118554448" duration="2000000" />
+      <workItem from="1764120574386" duration="4802000" />
+      <workItem from="1764125468774" duration="1659000" />
+      <workItem from="1764127138351" duration="2435000" />
+      <workItem from="1764129711534" duration="2334000" />
     </task>
     <task id="LOCAL-00001" summary="Compose agregado con las 3 bases y un get y post en mongo en msvc-monpatin">
       <option name="closed" value="true" />

@@ -39,8 +39,15 @@ public class SecurityConfig {
         http
             .sessionManagement( s -> s.sessionCreationPolicy( SessionCreationPolicy.STATELESS ) );
         http
-            .securityMatcher("/**" )// FALTA IMPLEMENTAR QUIEN PUEDE ACCEDER A QUE
+            .securityMatcher("/**" )
             .authorizeHttpRequests( authz -> authz
+                    // Swagger y OpenAPI libres
+                    .requestMatchers(
+                            "/swagger-ui.html",
+                            "/swagger-ui/**",
+                            "/v3/api-docs/**"
+                    ).permitAll()
+                    // FALTA IMPLEMENTAR QUIEN PUEDE ACCEDER A QUE
                     .requestMatchers(HttpMethod.POST, "/token").permitAll()
                     .requestMatchers(HttpMethod.POST, "/registrar").permitAll()
                     // MS-PARADAS
